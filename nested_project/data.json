@@ -1,0 +1,31 @@
+{
+    "name": "Test Data",
+    "version": "1.0",
+    "description": "Random test data for demonstration purposes",
+    "items": [
+        {
+            "id": 1,
+            "value": "First item",
+            "category": "test"
+        },
+        {
+            "id": 2,
+            "value": "Second item",
+            "category": "sample"
+        },
+        {
+            "id": 3,
+            "value": "Third item",
+            "category": "demo"
+        }
+    ],
+    "settings": {
+        "theme": "light",
+        "language": "en",
+        "enabled": true
+    },
+    "metadata": {
+        "created": "2025-01-09",
+        "author": "Test Script"
+    }
+}
