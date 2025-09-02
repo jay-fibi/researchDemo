@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page with Console Logs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        #clock {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Page for Browser Automation</h1>
+    <p>This page will produce console logs and change appearance.</p>
+    <div id="clock"></div>
+    <button id="triggerBtn">Trigger JavaScript Action</button>
+
+    <script>
+        console.log('Page loaded, initial console log.');
+
+        // Function to update clock
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            const dayString = now.toLocaleDateString('en-US', { weekday: 'long' });
+            document.getElementById('clock').textContent = `${timeString} on ${dayString}`;
+            console.log(`Clock updated: ${timeString} on ${dayString}`);
+        }
+
+        // Update clock every second
+        setInterval(updateClock, 1000);
+
+        // Initial update
+        updateClock();
+
+        // Button click handler
+        document.getElementById('triggerBtn').addEventListener('click', function() {
+            console.log('Button clicked, triggering action.');
+            document.body.style.backgroundColor = '#ffcccc';
+            console.log('Page has been updated with new background color.');
+            console.log('Action completed.');
+        });
+
+        console.log('JavaScript initialization complete.');
+    </script>
+</body>
+</html>
