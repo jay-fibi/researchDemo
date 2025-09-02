@@ -1,37 +1,24 @@
 const puppeteer = require('puppeteer');
-const fs = require('fs');
-const path = require('path');
 
 async function automateBrowser() {
-    const outputDir = path.join(__dirname, 'browser_capture');
-
-    // Ensure output directory exists
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir);
-    }
-
-    const browser = await puppeteer.launch({ headless: false }); // Set to true for headless
+    console.log('Launching browser...');
+    const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
 
-    // Array to store console logs
-    const consoleLogs = [];
+    console.log('Waiting for 15 seconds...');
+    await new Promise(resolve => setTimeout(resolve, 15000));
 
-    // Listen for console events
-    page.on('console', (msg) => {
-        console.log(`Console: ${msg.type()}: ${msg.text()}`);
-        consoleLogs.push(`${new Date().toISOString()}: ${msg.type()}: ${msg.text()}`);
-    });
+    console.log('Navigating to amazon.com...');
+    await page.goto('https://amazon.com', { waitUntil: 'networkidle2' });
+    console.log('Navigation to amazon.com successful.');
 
-    // Navigate to Amazon
-    await page.goto('https://amazon.com');
-    console.log('Browser launched and navigated to amazon.com');
+    console.log('Waiting for 30 seconds...');
+    await new Promise(resolve => setTimeout(resolve, 30000));
 
-    // Wait for 1 minute
-    console.log('Waiting for 1 minute...');
-    await new Promise(resolve => setTimeout(resolve, 60000));
-    console.log('Wait completed.');
+    console.log('Refreshing the page...');
+    await page.reload({ waitUntil: 'networkidle2' });
 
-    // Close browser
+    console.log('Closing browser...');
     await browser.close();
     console.log('Browser closed.');
 }
