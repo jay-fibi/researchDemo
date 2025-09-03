@@ -1,0 +1,25 @@
+Browser Crash Recovery Test Results - 2025-09-03T16:34:34.930Z
+
+Crash Detection: YES
+Recovery Attempts: 3
+Console Messages Captured: 15
+
+LOG MESSAGES (13):
+1. [2025-09-03T16:33:30.360Z] Crash test page loaded successfully
+2. [2025-09-03T16:33:30.401Z] Recovery: Page initialization complete - ready for crash testing
+3. [2025-09-03T16:33:33.272Z] Recovery: Starting stack overflow crash test
+4. [2025-09-03T16:33:33.274Z] Recovery: JavaScript error detected: Maximum call stack size exceeded
+5. [2025-09-03T16:33:34.281Z] Recovery: Testing recovery from crash state
+6. [2025-09-03T16:33:34.282Z] Basic computation works: 0.7500029035705397
+7. [2025-09-03T16:33:34.284Z] Recovery: Recovery test successful - basic functionality restored
+8. [2025-09-03T16:33:36.386Z] Crash test page loaded successfully
+9. [2025-09-03T16:33:36.386Z] Recovery: Page initialization complete - ready for crash testing
+10. [2025-09-03T16:33:38.936Z] Recovery: Testing recovery from crash state
+11. [2025-09-03T16:33:38.936Z] Basic computation works: 0.8825098829382299
+12. [2025-09-03T16:33:38.937Z] Recovery: Recovery test successful - basic functionality restored
+13. [2025-09-03T16:33:39.962Z] Recovery: Starting memory exhaustion crash test
+
+WARN MESSAGES (2):
+1. [2025-09-03T16:33:30.402Z] Warning: This page contains crash-inducing code
+2. [2025-09-03T16:33:36.386Z] Warning: This page contains crash-inducing code
+
