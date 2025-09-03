@@ -1,11 +1,1028 @@
-2025-09-02T18:25:20.250Z: log: Page loaded, initial console log.
-2025-09-02T18:25:20.266Z: log: Clock updated: 23:55:20 on Tuesday
-2025-09-02T18:25:20.267Z: log: JavaScript initialization complete.
-2025-09-02T18:25:21.250Z: log: Clock updated: 23:55:21 on Tuesday
-2025-09-02T18:25:22.249Z: log: Clock updated: 23:55:22 on Tuesday
-2025-09-02T18:25:23.249Z: log: Clock updated: 23:55:23 on Tuesday
-2025-09-02T18:25:23.378Z: log: Button clicked, triggering action.
-2025-09-02T18:25:23.379Z: log: Page has been updated with new background color.
-2025-09-02T18:25:23.379Z: log: Action completed.
-2025-09-02T18:25:24.248Z: log: Clock updated: 23:55:24 on Tuesday
-2025-09-02T18:25:25.249Z: log: Clock updated: 23:55:25 on Tuesday
+Console Output Capture Results - 2025-09-03T16:31:02.970Z
+
+Total messages captured: 700
+
+LOG MESSAGES (409):
+1. [2025-09-03T16:30:50.256Z] Page loaded successfully
+2. [2025-09-03T16:30:51.252Z] Initial log message 0
+3. [2025-09-03T16:30:51.253Z] Initial log message 1
+4. [2025-09-03T16:30:51.259Z] Initial log message 2
+5. [2025-09-03T16:30:51.261Z] Initial log message 3
+6. [2025-09-03T16:30:51.262Z] Initial log message 4
+7. [2025-09-03T16:30:51.262Z] Initial log message 5
+8. [2025-09-03T16:30:51.262Z] Initial log message 6
+9. [2025-09-03T16:30:51.263Z] Initial log message 7
+10. [2025-09-03T16:30:51.263Z] Initial log message 8
+11. [2025-09-03T16:30:51.263Z] Initial log message 9
+12. [2025-09-03T16:30:51.263Z] Initial log message 10
+13. [2025-09-03T16:30:51.263Z] Initial log message 11
+14. [2025-09-03T16:30:51.264Z] Initial log message 12
+15. [2025-09-03T16:30:51.264Z] Initial log message 13
+16. [2025-09-03T16:30:51.266Z] Initial log message 14
+17. [2025-09-03T16:30:51.266Z] Initial log message 15
+18. [2025-09-03T16:30:51.267Z] Initial log message 16
+19. [2025-09-03T16:30:51.267Z] Initial log message 17
+20. [2025-09-03T16:30:51.267Z] Initial log message 18
+21. [2025-09-03T16:30:51.267Z] Initial log message 19
+22. [2025-09-03T16:30:52.846Z] Regular log message #1
+23. [2025-09-03T16:30:52.847Z] String: Hello World 0
+   Args: JSHandle:String:, JSHandle:Hello World 0
+24. [2025-09-03T16:30:52.848Z] Number: 0
+   Args: JSHandle:Number:, JSHandle:0
+25. [2025-09-03T16:30:52.848Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+26. [2025-09-03T16:30:52.849Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+27. [2025-09-03T16:30:52.849Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+28. [2025-09-03T16:30:52.850Z] Regular log message #2
+29. [2025-09-03T16:30:52.850Z] String: Hello World 1
+   Args: JSHandle:String:, JSHandle:Hello World 1
+30. [2025-09-03T16:30:52.850Z] Number: 3.141592653589793
+   Args: JSHandle:Number:, JSHandle:3.141592653589793
+31. [2025-09-03T16:30:52.850Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+32. [2025-09-03T16:30:52.850Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+33. [2025-09-03T16:30:52.851Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+34. [2025-09-03T16:30:52.851Z] Regular log message #3
+35. [2025-09-03T16:30:52.851Z] String: Hello World 2
+   Args: JSHandle:String:, JSHandle:Hello World 2
+36. [2025-09-03T16:30:52.851Z] Number: 6.283185307179586
+   Args: JSHandle:Number:, JSHandle:6.283185307179586
+37. [2025-09-03T16:30:52.852Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+38. [2025-09-03T16:30:52.852Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+39. [2025-09-03T16:30:52.852Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+40. [2025-09-03T16:30:52.852Z] Regular log message #4
+41. [2025-09-03T16:30:52.853Z] String: Hello World 3
+   Args: JSHandle:String:, JSHandle:Hello World 3
+42. [2025-09-03T16:30:52.853Z] Number: 9.42477796076938
+   Args: JSHandle:Number:, JSHandle:9.42477796076938
+43. [2025-09-03T16:30:52.853Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+44. [2025-09-03T16:30:52.853Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+45. [2025-09-03T16:30:52.853Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+46. [2025-09-03T16:30:52.853Z] Regular log message #5
+47. [2025-09-03T16:30:52.854Z] String: Hello World 4
+   Args: JSHandle:String:, JSHandle:Hello World 4
+48. [2025-09-03T16:30:52.854Z] Number: 12.566370614359172
+   Args: JSHandle:Number:, JSHandle:12.566370614359172
+49. [2025-09-03T16:30:52.854Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+50. [2025-09-03T16:30:52.855Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+51. [2025-09-03T16:30:52.855Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+52. [2025-09-03T16:30:52.855Z] Regular log message #6
+53. [2025-09-03T16:30:52.855Z] String: Hello World 5
+   Args: JSHandle:String:, JSHandle:Hello World 5
+54. [2025-09-03T16:30:52.855Z] Number: 15.707963267948966
+   Args: JSHandle:Number:, JSHandle:15.707963267948966
+55. [2025-09-03T16:30:52.855Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+56. [2025-09-03T16:30:52.856Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+57. [2025-09-03T16:30:52.856Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+58. [2025-09-03T16:30:52.857Z] Regular log message #7
+59. [2025-09-03T16:30:52.857Z] String: Hello World 6
+   Args: JSHandle:String:, JSHandle:Hello World 6
+60. [2025-09-03T16:30:52.858Z] Number: 18.84955592153876
+   Args: JSHandle:Number:, JSHandle:18.84955592153876
+61. [2025-09-03T16:30:52.858Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+62. [2025-09-03T16:30:52.859Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+63. [2025-09-03T16:30:52.859Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+64. [2025-09-03T16:30:52.859Z] Regular log message #8
+65. [2025-09-03T16:30:52.860Z] String: Hello World 7
+   Args: JSHandle:String:, JSHandle:Hello World 7
+66. [2025-09-03T16:30:52.860Z] Number: 21.991148575128552
+   Args: JSHandle:Number:, JSHandle:21.991148575128552
+67. [2025-09-03T16:30:52.860Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+68. [2025-09-03T16:30:52.860Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+69. [2025-09-03T16:30:52.860Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+70. [2025-09-03T16:30:52.861Z] Regular log message #9
+71. [2025-09-03T16:30:52.861Z] String: Hello World 8
+   Args: JSHandle:String:, JSHandle:Hello World 8
+72. [2025-09-03T16:30:52.861Z] Number: 25.132741228718345
+   Args: JSHandle:Number:, JSHandle:25.132741228718345
+73. [2025-09-03T16:30:52.861Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+74. [2025-09-03T16:30:52.861Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+75. [2025-09-03T16:30:52.861Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+76. [2025-09-03T16:30:52.861Z] Regular log message #10
+77. [2025-09-03T16:30:52.862Z] String: Hello World 9
+   Args: JSHandle:String:, JSHandle:Hello World 9
+78. [2025-09-03T16:30:52.862Z] Number: 28.274333882308138
+   Args: JSHandle:Number:, JSHandle:28.274333882308138
+79. [2025-09-03T16:30:52.862Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+80. [2025-09-03T16:30:52.862Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+81. [2025-09-03T16:30:52.862Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+82. [2025-09-03T16:30:52.862Z] Regular log message #11
+83. [2025-09-03T16:30:52.862Z] String: Hello World 10
+   Args: JSHandle:String:, JSHandle:Hello World 10
+84. [2025-09-03T16:30:52.862Z] Number: 31.41592653589793
+   Args: JSHandle:Number:, JSHandle:31.41592653589793
+85. [2025-09-03T16:30:52.862Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+86. [2025-09-03T16:30:52.862Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+87. [2025-09-03T16:30:52.862Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+88. [2025-09-03T16:30:52.862Z] Regular log message #12
+89. [2025-09-03T16:30:52.863Z] String: Hello World 11
+   Args: JSHandle:String:, JSHandle:Hello World 11
+90. [2025-09-03T16:30:52.863Z] Number: 34.55751918948772
+   Args: JSHandle:Number:, JSHandle:34.55751918948772
+91. [2025-09-03T16:30:52.863Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+92. [2025-09-03T16:30:52.863Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+93. [2025-09-03T16:30:52.863Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+94. [2025-09-03T16:30:52.863Z] Regular log message #13
+95. [2025-09-03T16:30:52.863Z] String: Hello World 12
+   Args: JSHandle:String:, JSHandle:Hello World 12
+96. [2025-09-03T16:30:52.863Z] Number: 37.69911184307752
+   Args: JSHandle:Number:, JSHandle:37.69911184307752
+97. [2025-09-03T16:30:52.863Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+98. [2025-09-03T16:30:52.863Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+99. [2025-09-03T16:30:52.863Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+100. [2025-09-03T16:30:52.863Z] Regular log message #14
+101. [2025-09-03T16:30:52.863Z] String: Hello World 13
+   Args: JSHandle:String:, JSHandle:Hello World 13
+102. [2025-09-03T16:30:52.863Z] Number: 40.840704496667314
+   Args: JSHandle:Number:, JSHandle:40.840704496667314
+103. [2025-09-03T16:30:52.864Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+104. [2025-09-03T16:30:52.864Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+105. [2025-09-03T16:30:52.864Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+106. [2025-09-03T16:30:52.864Z] Regular log message #15
+107. [2025-09-03T16:30:52.864Z] String: Hello World 14
+   Args: JSHandle:String:, JSHandle:Hello World 14
+108. [2025-09-03T16:30:52.864Z] Number: 43.982297150257104
+   Args: JSHandle:Number:, JSHandle:43.982297150257104
+109. [2025-09-03T16:30:52.864Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+110. [2025-09-03T16:30:52.864Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+111. [2025-09-03T16:30:52.864Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+112. [2025-09-03T16:30:52.865Z] Regular log message #16
+113. [2025-09-03T16:30:52.865Z] String: Hello World 15
+   Args: JSHandle:String:, JSHandle:Hello World 15
+114. [2025-09-03T16:30:52.866Z] Number: 47.12388980384689
+   Args: JSHandle:Number:, JSHandle:47.12388980384689
+115. [2025-09-03T16:30:52.866Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+116. [2025-09-03T16:30:52.866Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+117. [2025-09-03T16:30:52.866Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+118. [2025-09-03T16:30:52.866Z] Regular log message #17
+119. [2025-09-03T16:30:52.866Z] String: Hello World 16
+   Args: JSHandle:String:, JSHandle:Hello World 16
+120. [2025-09-03T16:30:52.866Z] Number: 50.26548245743669
+   Args: JSHandle:Number:, JSHandle:50.26548245743669
+121. [2025-09-03T16:30:52.867Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+122. [2025-09-03T16:30:52.867Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+123. [2025-09-03T16:30:52.867Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+124. [2025-09-03T16:30:52.867Z] Regular log message #18
+125. [2025-09-03T16:30:52.867Z] String: Hello World 17
+   Args: JSHandle:String:, JSHandle:Hello World 17
+126. [2025-09-03T16:30:52.868Z] Number: 53.40707511102649
+   Args: JSHandle:Number:, JSHandle:53.40707511102649
+127. [2025-09-03T16:30:52.868Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+128. [2025-09-03T16:30:52.868Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+129. [2025-09-03T16:30:52.868Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+130. [2025-09-03T16:30:52.868Z] Regular log message #19
+131. [2025-09-03T16:30:52.868Z] String: Hello World 18
+   Args: JSHandle:String:, JSHandle:Hello World 18
+132. [2025-09-03T16:30:52.868Z] Number: 56.548667764616276
+   Args: JSHandle:Number:, JSHandle:56.548667764616276
+133. [2025-09-03T16:30:52.868Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+134. [2025-09-03T16:30:52.868Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+135. [2025-09-03T16:30:52.868Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+136. [2025-09-03T16:30:52.868Z] Regular log message #20
+137. [2025-09-03T16:30:52.869Z] String: Hello World 19
+   Args: JSHandle:String:, JSHandle:Hello World 19
+138. [2025-09-03T16:30:52.869Z] Number: 59.690260418206066
+   Args: JSHandle:Number:, JSHandle:59.690260418206066
+139. [2025-09-03T16:30:52.869Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+140. [2025-09-03T16:30:52.869Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+141. [2025-09-03T16:30:52.869Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+142. [2025-09-03T16:30:52.869Z] Regular log message #21
+143. [2025-09-03T16:30:52.870Z] String: Hello World 20
+   Args: JSHandle:String:, JSHandle:Hello World 20
+144. [2025-09-03T16:30:52.870Z] Number: 62.83185307179586
+   Args: JSHandle:Number:, JSHandle:62.83185307179586
+145. [2025-09-03T16:30:52.870Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+146. [2025-09-03T16:30:52.871Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+147. [2025-09-03T16:30:52.871Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+148. [2025-09-03T16:30:52.871Z] Regular log message #22
+149. [2025-09-03T16:30:52.871Z] String: Hello World 21
+   Args: JSHandle:String:, JSHandle:Hello World 21
+150. [2025-09-03T16:30:52.871Z] Number: 65.97344572538566
+   Args: JSHandle:Number:, JSHandle:65.97344572538566
+151. [2025-09-03T16:30:52.872Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+152. [2025-09-03T16:30:52.872Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+153. [2025-09-03T16:30:52.872Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+154. [2025-09-03T16:30:52.872Z] Regular log message #23
+155. [2025-09-03T16:30:52.872Z] String: Hello World 22
+   Args: JSHandle:String:, JSHandle:Hello World 22
+156. [2025-09-03T16:30:52.873Z] Number: 69.11503837897544
+   Args: JSHandle:Number:, JSHandle:69.11503837897544
+157. [2025-09-03T16:30:52.873Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+158. [2025-09-03T16:30:52.873Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+159. [2025-09-03T16:30:52.873Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+160. [2025-09-03T16:30:52.874Z] Regular log message #24
+161. [2025-09-03T16:30:52.875Z] String: Hello World 23
+   Args: JSHandle:String:, JSHandle:Hello World 23
+162. [2025-09-03T16:30:52.875Z] Number: 72.25663103256524
+   Args: JSHandle:Number:, JSHandle:72.25663103256524
+163. [2025-09-03T16:30:52.875Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+164. [2025-09-03T16:30:52.875Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+165. [2025-09-03T16:30:52.875Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+166. [2025-09-03T16:30:52.875Z] Regular log message #25
+167. [2025-09-03T16:30:52.876Z] String: Hello World 24
+   Args: JSHandle:String:, JSHandle:Hello World 24
+168. [2025-09-03T16:30:52.876Z] Number: 75.39822368615503
+   Args: JSHandle:Number:, JSHandle:75.39822368615503
+169. [2025-09-03T16:30:52.876Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+170. [2025-09-03T16:30:52.876Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+171. [2025-09-03T16:30:52.876Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+172. [2025-09-03T16:30:52.876Z] Regular log message #26
+173. [2025-09-03T16:30:52.877Z] String: Hello World 25
+   Args: JSHandle:String:, JSHandle:Hello World 25
+174. [2025-09-03T16:30:52.877Z] Number: 78.53981633974483
+   Args: JSHandle:Number:, JSHandle:78.53981633974483
+175. [2025-09-03T16:30:52.877Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+176. [2025-09-03T16:30:52.877Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+177. [2025-09-03T16:30:52.877Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+178. [2025-09-03T16:30:52.877Z] Regular log message #27
+179. [2025-09-03T16:30:52.877Z] String: Hello World 26
+   Args: JSHandle:String:, JSHandle:Hello World 26
+180. [2025-09-03T16:30:52.877Z] Number: 81.68140899333463
+   Args: JSHandle:Number:, JSHandle:81.68140899333463
+181. [2025-09-03T16:30:52.877Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+182. [2025-09-03T16:30:52.877Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+183. [2025-09-03T16:30:52.877Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+184. [2025-09-03T16:30:52.877Z] Regular log message #28
+185. [2025-09-03T16:30:52.877Z] String: Hello World 27
+   Args: JSHandle:String:, JSHandle:Hello World 27
+186. [2025-09-03T16:30:52.877Z] Number: 84.82300164692441
+   Args: JSHandle:Number:, JSHandle:84.82300164692441
+187. [2025-09-03T16:30:52.877Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+188. [2025-09-03T16:30:52.878Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+189. [2025-09-03T16:30:52.878Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+190. [2025-09-03T16:30:52.878Z] Regular log message #29
+191. [2025-09-03T16:30:52.878Z] String: Hello World 28
+   Args: JSHandle:String:, JSHandle:Hello World 28
+192. [2025-09-03T16:30:52.878Z] Number: 87.96459430051421
+   Args: JSHandle:Number:, JSHandle:87.96459430051421
+193. [2025-09-03T16:30:52.878Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+194. [2025-09-03T16:30:52.878Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+195. [2025-09-03T16:30:52.878Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+196. [2025-09-03T16:30:52.878Z] Regular log message #30
+197. [2025-09-03T16:30:52.878Z] String: Hello World 29
+   Args: JSHandle:String:, JSHandle:Hello World 29
+198. [2025-09-03T16:30:52.878Z] Number: 91.106186954104
+   Args: JSHandle:Number:, JSHandle:91.106186954104
+199. [2025-09-03T16:30:52.878Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+200. [2025-09-03T16:30:52.878Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+201. [2025-09-03T16:30:52.878Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+202. [2025-09-03T16:30:52.878Z] Regular log message #31
+203. [2025-09-03T16:30:52.879Z] String: Hello World 30
+   Args: JSHandle:String:, JSHandle:Hello World 30
+204. [2025-09-03T16:30:52.879Z] Number: 94.24777960769379
+   Args: JSHandle:Number:, JSHandle:94.24777960769379
+205. [2025-09-03T16:30:52.879Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+206. [2025-09-03T16:30:52.879Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+207. [2025-09-03T16:30:52.879Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+208. [2025-09-03T16:30:52.879Z] Regular log message #32
+209. [2025-09-03T16:30:52.879Z] String: Hello World 31
+   Args: JSHandle:String:, JSHandle:Hello World 31
+210. [2025-09-03T16:30:52.879Z] Number: 97.38937226128358
+   Args: JSHandle:Number:, JSHandle:97.38937226128358
+211. [2025-09-03T16:30:52.879Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+212. [2025-09-03T16:30:52.880Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+213. [2025-09-03T16:30:52.880Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+214. [2025-09-03T16:30:52.880Z] Regular log message #33
+215. [2025-09-03T16:30:52.880Z] String: Hello World 32
+   Args: JSHandle:String:, JSHandle:Hello World 32
+216. [2025-09-03T16:30:52.880Z] Number: 100.53096491487338
+   Args: JSHandle:Number:, JSHandle:100.53096491487338
+217. [2025-09-03T16:30:52.880Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+218. [2025-09-03T16:30:52.880Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+219. [2025-09-03T16:30:52.880Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+220. [2025-09-03T16:30:52.881Z] Regular log message #34
+221. [2025-09-03T16:30:52.881Z] String: Hello World 33
+   Args: JSHandle:String:, JSHandle:Hello World 33
+222. [2025-09-03T16:30:52.881Z] Number: 103.67255756846318
+   Args: JSHandle:Number:, JSHandle:103.67255756846318
+223. [2025-09-03T16:30:52.881Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+224. [2025-09-03T16:30:52.881Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+225. [2025-09-03T16:30:52.881Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+226. [2025-09-03T16:30:52.881Z] Regular log message #35
+227. [2025-09-03T16:30:52.881Z] String: Hello World 34
+   Args: JSHandle:String:, JSHandle:Hello World 34
+228. [2025-09-03T16:30:52.881Z] Number: 106.81415022205297
+   Args: JSHandle:Number:, JSHandle:106.81415022205297
+229. [2025-09-03T16:30:52.881Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+230. [2025-09-03T16:30:52.881Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+231. [2025-09-03T16:30:52.881Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+232. [2025-09-03T16:30:52.881Z] Regular log message #36
+233. [2025-09-03T16:30:52.882Z] String: Hello World 35
+   Args: JSHandle:String:, JSHandle:Hello World 35
+234. [2025-09-03T16:30:52.882Z] Number: 109.95574287564276
+   Args: JSHandle:Number:, JSHandle:109.95574287564276
+235. [2025-09-03T16:30:52.882Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+236. [2025-09-03T16:30:52.882Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+237. [2025-09-03T16:30:52.882Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+238. [2025-09-03T16:30:52.882Z] Regular log message #37
+239. [2025-09-03T16:30:52.882Z] String: Hello World 36
+   Args: JSHandle:String:, JSHandle:Hello World 36
+240. [2025-09-03T16:30:52.882Z] Number: 113.09733552923255
+   Args: JSHandle:Number:, JSHandle:113.09733552923255
+241. [2025-09-03T16:30:52.882Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+242. [2025-09-03T16:30:52.882Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+243. [2025-09-03T16:30:52.882Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+244. [2025-09-03T16:30:52.882Z] Regular log message #38
+245. [2025-09-03T16:30:52.883Z] String: Hello World 37
+   Args: JSHandle:String:, JSHandle:Hello World 37
+246. [2025-09-03T16:30:52.883Z] Number: 116.23892818282235
+   Args: JSHandle:Number:, JSHandle:116.23892818282235
+247. [2025-09-03T16:30:52.883Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+248. [2025-09-03T16:30:52.883Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+249. [2025-09-03T16:30:52.883Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+250. [2025-09-03T16:30:52.883Z] Regular log message #39
+251. [2025-09-03T16:30:52.883Z] String: Hello World 38
+   Args: JSHandle:String:, JSHandle:Hello World 38
+252. [2025-09-03T16:30:52.883Z] Number: 119.38052083641213
+   Args: JSHandle:Number:, JSHandle:119.38052083641213
+253. [2025-09-03T16:30:52.883Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+254. [2025-09-03T16:30:52.883Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+255. [2025-09-03T16:30:52.883Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+256. [2025-09-03T16:30:52.883Z] Regular log message #40
+257. [2025-09-03T16:30:52.883Z] String: Hello World 39
+   Args: JSHandle:String:, JSHandle:Hello World 39
+258. [2025-09-03T16:30:52.883Z] Number: 122.52211349000193
+   Args: JSHandle:Number:, JSHandle:122.52211349000193
+259. [2025-09-03T16:30:52.883Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+260. [2025-09-03T16:30:52.883Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+261. [2025-09-03T16:30:52.883Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+262. [2025-09-03T16:30:52.884Z] Regular log message #41
+263. [2025-09-03T16:30:52.884Z] String: Hello World 40
+   Args: JSHandle:String:, JSHandle:Hello World 40
+264. [2025-09-03T16:30:52.884Z] Number: 125.66370614359172
+   Args: JSHandle:Number:, JSHandle:125.66370614359172
+265. [2025-09-03T16:30:52.884Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+266. [2025-09-03T16:30:52.884Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+267. [2025-09-03T16:30:52.884Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+268. [2025-09-03T16:30:52.884Z] Regular log message #42
+269. [2025-09-03T16:30:52.884Z] String: Hello World 41
+   Args: JSHandle:String:, JSHandle:Hello World 41
+270. [2025-09-03T16:30:52.884Z] Number: 128.8052987971815
+   Args: JSHandle:Number:, JSHandle:128.8052987971815
+271. [2025-09-03T16:30:52.884Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+272. [2025-09-03T16:30:52.884Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+273. [2025-09-03T16:30:52.884Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+274. [2025-09-03T16:30:52.884Z] Regular log message #43
+275. [2025-09-03T16:30:52.884Z] String: Hello World 42
+   Args: JSHandle:String:, JSHandle:Hello World 42
+276. [2025-09-03T16:30:52.884Z] Number: 131.94689145077132
+   Args: JSHandle:Number:, JSHandle:131.94689145077132
+277. [2025-09-03T16:30:52.884Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+278. [2025-09-03T16:30:52.885Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+279. [2025-09-03T16:30:52.885Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+280. [2025-09-03T16:30:52.886Z] Regular log message #44
+281. [2025-09-03T16:30:52.891Z] String: Hello World 43
+   Args: JSHandle:String:, JSHandle:Hello World 43
+282. [2025-09-03T16:30:52.892Z] Number: 135.0884841043611
+   Args: JSHandle:Number:, JSHandle:135.0884841043611
+283. [2025-09-03T16:30:52.892Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+284. [2025-09-03T16:30:52.892Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+285. [2025-09-03T16:30:52.892Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+286. [2025-09-03T16:30:52.892Z] Regular log message #45
+287. [2025-09-03T16:30:52.892Z] String: Hello World 44
+   Args: JSHandle:String:, JSHandle:Hello World 44
+288. [2025-09-03T16:30:52.892Z] Number: 138.23007675795088
+   Args: JSHandle:Number:, JSHandle:138.23007675795088
+289. [2025-09-03T16:30:52.892Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+290. [2025-09-03T16:30:52.892Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+291. [2025-09-03T16:30:52.892Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+292. [2025-09-03T16:30:52.892Z] Regular log message #46
+293. [2025-09-03T16:30:52.892Z] String: Hello World 45
+   Args: JSHandle:String:, JSHandle:Hello World 45
+294. [2025-09-03T16:30:52.892Z] Number: 141.3716694115407
+   Args: JSHandle:Number:, JSHandle:141.3716694115407
+295. [2025-09-03T16:30:52.893Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+296. [2025-09-03T16:30:52.893Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+297. [2025-09-03T16:30:52.893Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+298. [2025-09-03T16:30:52.893Z] Regular log message #47
+299. [2025-09-03T16:30:52.893Z] String: Hello World 46
+   Args: JSHandle:String:, JSHandle:Hello World 46
+300. [2025-09-03T16:30:52.893Z] Number: 144.51326206513048
+   Args: JSHandle:Number:, JSHandle:144.51326206513048
+301. [2025-09-03T16:30:52.893Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+302. [2025-09-03T16:30:52.893Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+303. [2025-09-03T16:30:52.893Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+304. [2025-09-03T16:30:52.893Z] Regular log message #48
+305. [2025-09-03T16:30:52.893Z] String: Hello World 47
+   Args: JSHandle:String:, JSHandle:Hello World 47
+306. [2025-09-03T16:30:52.893Z] Number: 147.6548547187203
+   Args: JSHandle:Number:, JSHandle:147.6548547187203
+307. [2025-09-03T16:30:52.893Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+308. [2025-09-03T16:30:52.893Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+309. [2025-09-03T16:30:52.893Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+310. [2025-09-03T16:30:52.893Z] Regular log message #49
+311. [2025-09-03T16:30:52.894Z] String: Hello World 48
+   Args: JSHandle:String:, JSHandle:Hello World 48
+312. [2025-09-03T16:30:52.894Z] Number: 150.79644737231007
+   Args: JSHandle:Number:, JSHandle:150.79644737231007
+313. [2025-09-03T16:30:52.894Z] Boolean: true
+   Args: JSHandle:Boolean:, JSHandle:true
+314. [2025-09-03T16:30:52.894Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+315. [2025-09-03T16:30:52.894Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+316. [2025-09-03T16:30:52.894Z] Regular log message #50
+317. [2025-09-03T16:30:52.894Z] String: Hello World 49
+   Args: JSHandle:String:, JSHandle:Hello World 49
+318. [2025-09-03T16:30:52.894Z] Number: 153.93804002589985
+   Args: JSHandle:Number:, JSHandle:153.93804002589985
+319. [2025-09-03T16:30:52.894Z] Boolean: false
+   Args: JSHandle:Boolean:, JSHandle:false
+320. [2025-09-03T16:30:52.894Z] Object: JSHandle@object
+   Args: JSHandle:Object:, JSHandle@object
+321. [2025-09-03T16:30:52.894Z] Array: JSHandle@array
+   Args: JSHandle:Array:, JSHandle@array
+322. [2025-09-03T16:30:55.165Z] Repeated log #1 at 22:00:55
+323. [2025-09-03T16:30:55.166Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+324. [2025-09-03T16:30:55.330Z] Repeated log #2 at 22:00:55
+325. [2025-09-03T16:30:55.333Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+326. [2025-09-03T16:30:55.528Z] Repeated log #3 at 22:00:55
+327. [2025-09-03T16:30:55.529Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+328. [2025-09-03T16:30:55.730Z] Repeated log #4 at 22:00:55
+329. [2025-09-03T16:30:55.734Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+330. [2025-09-03T16:30:55.931Z] Repeated log #5 at 22:00:55
+331. [2025-09-03T16:30:55.934Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+332. [2025-09-03T16:30:56.131Z] Repeated log #6 at 22:00:56
+333. [2025-09-03T16:30:56.134Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+334. [2025-09-03T16:30:56.330Z] Repeated log #7 at 22:00:56
+335. [2025-09-03T16:30:56.334Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+336. [2025-09-03T16:30:56.531Z] Repeated log #8 at 22:00:56
+337. [2025-09-03T16:30:56.534Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+338. [2025-09-03T16:30:56.731Z] Repeated log #9 at 22:00:56
+339. [2025-09-03T16:30:56.733Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+340. [2025-09-03T16:30:56.930Z] Repeated log #10 at 22:00:56
+341. [2025-09-03T16:30:56.933Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+342. [2025-09-03T16:30:57.130Z] Repeated log #11 at 22:00:57
+343. [2025-09-03T16:30:57.132Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+344. [2025-09-03T16:30:57.330Z] Repeated log #12 at 22:00:57
+345. [2025-09-03T16:30:57.331Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+346. [2025-09-03T16:30:57.528Z] Repeated log #13 at 22:00:57
+347. [2025-09-03T16:30:57.531Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+348. [2025-09-03T16:30:57.729Z] Repeated log #14 at 22:00:57
+349. [2025-09-03T16:30:57.732Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+350. [2025-09-03T16:30:57.929Z] Repeated log #15 at 22:00:57
+351. [2025-09-03T16:30:57.932Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+352. [2025-09-03T16:30:58.130Z] Repeated log #16 at 22:00:58
+353. [2025-09-03T16:30:58.133Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+354. [2025-09-03T16:30:58.334Z] Repeated log #17 at 22:00:58
+355. [2025-09-03T16:30:58.335Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+356. [2025-09-03T16:30:58.530Z] Repeated log #18 at 22:00:58
+357. [2025-09-03T16:30:58.533Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+358. [2025-09-03T16:30:58.730Z] Repeated log #19 at 22:00:58
+359. [2025-09-03T16:30:58.733Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+360. [2025-09-03T16:30:58.930Z] Repeated log #20 at 22:00:58
+361. [2025-09-03T16:30:58.931Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+362. [2025-09-03T16:30:59.130Z] Repeated log #21 at 22:00:59
+363. [2025-09-03T16:30:59.133Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+364. [2025-09-03T16:30:59.333Z] Repeated log #22 at 22:00:59
+365. [2025-09-03T16:30:59.336Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+366. [2025-09-03T16:30:59.530Z] Repeated log #23 at 22:00:59
+367. [2025-09-03T16:30:59.532Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+368. [2025-09-03T16:30:59.730Z] Repeated log #24 at 22:00:59
+369. [2025-09-03T16:30:59.733Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+370. [2025-09-03T16:30:59.932Z] Repeated log #25 at 22:00:59
+371. [2025-09-03T16:30:59.933Z] Performance: JSHandle@object
+   Args: JSHandle:Performance:, JSHandle@object
+372. [2025-09-03T16:30:59.948Z] Repeated logging stopped at cycle #25
+373. [2025-09-03T16:31:00.962Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+374. [2025-09-03T16:31:00.963Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+375. [2025-09-03T16:31:00.963Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+376. [2025-09-03T16:31:00.963Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+377. [2025-09-03T16:31:00.964Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+378. [2025-09-03T16:31:00.964Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+379. [2025-09-03T16:31:00.964Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+380. [2025-09-03T16:31:00.964Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+381. [2025-09-03T16:31:00.964Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+382. [2025-09-03T16:31:00.964Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+383. [2025-09-03T16:31:00.964Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+384. [2025-09-03T16:31:00.965Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+385. [2025-09-03T16:31:00.965Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+386. [2025-09-03T16:31:00.965Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+387. [2025-09-03T16:31:00.965Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+388. [2025-09-03T16:31:00.965Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+389. [2025-09-03T16:31:00.965Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+390. [2025-09-03T16:31:00.965Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+391. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+392. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+393. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+394. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+395. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+396. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+397. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+398. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+399. [2025-09-03T16:31:00.966Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+400. [2025-09-03T16:31:00.967Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+401. [2025-09-03T16:31:00.967Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+402. [2025-09-03T16:31:00.967Z] Complex object log: JSHandle@object
+   Args: JSHandle:Complex object log:, JSHandle@object
+403. [2025-09-03T16:31:00.967Z] Data structure 0: JSHandle@object
+   Args: JSHandle:Data structure 0:, JSHandle@object
+404. [2025-09-03T16:31:00.967Z] Data structure 1: JSHandle@object
+   Args: JSHandle:Data structure 1:, JSHandle@object
+405. [2025-09-03T16:31:00.967Z] Data structure 2: JSHandle@object
+   Args: JSHandle:Data structure 2:, JSHandle@object
+406. [2025-09-03T16:31:00.967Z] Data structure 3: JSHandle@object
+   Args: JSHandle:Data structure 3:, JSHandle@object
+407. [2025-09-03T16:31:00.967Z] Data structure 4: JSHandle@object
+   Args: JSHandle:Data structure 4:, JSHandle@object
+408. [2025-09-03T16:31:00.967Z] Data structure 5: JSHandle@object
+   Args: JSHandle:Data structure 5:, JSHandle@object
+409. [2025-09-03T16:31:00.967Z] Data structure 6: JSHandle@object
+   Args: JSHandle:Data structure 6:, JSHandle@object
+
+INFO MESSAGES (76):
+1. [2025-09-03T16:30:50.268Z] Console output test page initialized
+2. [2025-09-03T16:30:52.847Z] Info message #1
+3. [2025-09-03T16:30:52.850Z] Info message #2
+4. [2025-09-03T16:30:52.851Z] Info message #3
+5. [2025-09-03T16:30:52.853Z] Info message #4
+6. [2025-09-03T16:30:52.853Z] Info message #5
+7. [2025-09-03T16:30:52.855Z] Info message #6
+8. [2025-09-03T16:30:52.857Z] Info message #7
+9. [2025-09-03T16:30:52.859Z] Info message #8
+10. [2025-09-03T16:30:52.861Z] Info message #9
+11. [2025-09-03T16:30:52.862Z] Info message #10
+12. [2025-09-03T16:30:52.862Z] Info message #11
+13. [2025-09-03T16:30:52.862Z] Info message #12
+14. [2025-09-03T16:30:52.863Z] Info message #13
+15. [2025-09-03T16:30:52.863Z] Info message #14
+16. [2025-09-03T16:30:52.864Z] Info message #15
+17. [2025-09-03T16:30:52.865Z] Info message #16
+18. [2025-09-03T16:30:52.866Z] Info message #17
+19. [2025-09-03T16:30:52.867Z] Info message #18
+20. [2025-09-03T16:30:52.868Z] Info message #19
+21. [2025-09-03T16:30:52.868Z] Info message #20
+22. [2025-09-03T16:30:52.869Z] Info message #21
+23. [2025-09-03T16:30:52.871Z] Info message #22
+24. [2025-09-03T16:30:52.872Z] Info message #23
+25. [2025-09-03T16:30:52.874Z] Info message #24
+26. [2025-09-03T16:30:52.875Z] Info message #25
+27. [2025-09-03T16:30:52.876Z] Info message #26
+28. [2025-09-03T16:30:52.877Z] Info message #27
+29. [2025-09-03T16:30:52.877Z] Info message #28
+30. [2025-09-03T16:30:52.878Z] Info message #29
+31. [2025-09-03T16:30:52.878Z] Info message #30
+32. [2025-09-03T16:30:52.878Z] Info message #31
+33. [2025-09-03T16:30:52.879Z] Info message #32
+34. [2025-09-03T16:30:52.880Z] Info message #33
+35. [2025-09-03T16:30:52.881Z] Info message #34
+36. [2025-09-03T16:30:52.881Z] Info message #35
+37. [2025-09-03T16:30:52.881Z] Info message #36
+38. [2025-09-03T16:30:52.882Z] Info message #37
+39. [2025-09-03T16:30:52.882Z] Info message #38
+40. [2025-09-03T16:30:52.883Z] Info message #39
+41. [2025-09-03T16:30:52.883Z] Info message #40
+42. [2025-09-03T16:30:52.884Z] Info message #41
+43. [2025-09-03T16:30:52.884Z] Info message #42
+44. [2025-09-03T16:30:52.884Z] Info message #43
+45. [2025-09-03T16:30:52.887Z] Info message #44
+46. [2025-09-03T16:30:52.892Z] Info message #45
+47. [2025-09-03T16:30:52.892Z] Info message #46
+48. [2025-09-03T16:30:52.893Z] Info message #47
+49. [2025-09-03T16:30:52.893Z] Info message #48
+50. [2025-09-03T16:30:52.893Z] Info message #49
+51. [2025-09-03T16:30:52.894Z] Info message #50
+52. [2025-09-03T16:30:55.165Z] Info log #1 - System status: OK
+53. [2025-09-03T16:30:55.331Z] Info log #2 - System status: OK
+54. [2025-09-03T16:30:55.528Z] Info log #3 - System status: OK
+55. [2025-09-03T16:30:55.732Z] Info log #4 - System status: OK
+56. [2025-09-03T16:30:55.933Z] Info log #5 - System status: OK
+57. [2025-09-03T16:30:56.133Z] Info log #6 - System status: OK
+58. [2025-09-03T16:30:56.333Z] Info log #7 - System status: OK
+59. [2025-09-03T16:30:56.532Z] Info log #8 - System status: OK
+60. [2025-09-03T16:30:56.732Z] Info log #9 - System status: OK
+61. [2025-09-03T16:30:56.932Z] Info log #10 - System status: OK
+62. [2025-09-03T16:30:57.131Z] Info log #11 - System status: OK
+63. [2025-09-03T16:30:57.330Z] Info log #12 - System status: OK
+64. [2025-09-03T16:30:57.530Z] Info log #13 - System status: OK
+65. [2025-09-03T16:30:57.730Z] Info log #14 - System status: OK
+66. [2025-09-03T16:30:57.930Z] Info log #15 - System status: OK
+67. [2025-09-03T16:30:58.131Z] Info log #16 - System status: OK
+68. [2025-09-03T16:30:58.335Z] Info log #17 - System status: OK
+69. [2025-09-03T16:30:58.531Z] Info log #18 - System status: OK
+70. [2025-09-03T16:30:58.731Z] Info log #19 - System status: OK
+71. [2025-09-03T16:30:58.930Z] Info log #20 - System status: OK
+72. [2025-09-03T16:30:59.132Z] Info log #21 - System status: OK
+73. [2025-09-03T16:30:59.334Z] Info log #22 - System status: OK
+74. [2025-09-03T16:30:59.531Z] Info log #23 - System status: OK
+75. [2025-09-03T16:30:59.731Z] Info log #24 - System status: OK
+76. [2025-09-03T16:30:59.933Z] Info log #25 - System status: OK
+
+WARN MESSAGES (106):
+1. [2025-09-03T16:30:50.268Z] This is a test environment - expect extensive logging
+2. [2025-09-03T16:30:52.847Z] Warning message #1
+3. [2025-09-03T16:30:52.850Z] Warning message #2
+4. [2025-09-03T16:30:52.851Z] Warning message #3
+5. [2025-09-03T16:30:52.853Z] Warning message #4
+6. [2025-09-03T16:30:52.853Z] Warning message #5
+7. [2025-09-03T16:30:52.855Z] Warning message #6
+8. [2025-09-03T16:30:52.857Z] Warning message #7
+9. [2025-09-03T16:30:52.859Z] Warning message #8
+10. [2025-09-03T16:30:52.861Z] Warning message #9
+11. [2025-09-03T16:30:52.862Z] Warning message #10
+12. [2025-09-03T16:30:52.862Z] Warning message #11
+13. [2025-09-03T16:30:52.862Z] Warning message #12
+14. [2025-09-03T16:30:52.863Z] Warning message #13
+15. [2025-09-03T16:30:52.863Z] Warning message #14
+16. [2025-09-03T16:30:52.864Z] Warning message #15
+17. [2025-09-03T16:30:52.865Z] Warning message #16
+18. [2025-09-03T16:30:52.866Z] Warning message #17
+19. [2025-09-03T16:30:52.867Z] Warning message #18
+20. [2025-09-03T16:30:52.868Z] Warning message #19
+21. [2025-09-03T16:30:52.868Z] Warning message #20
+22. [2025-09-03T16:30:52.869Z] Warning message #21
+23. [2025-09-03T16:30:52.871Z] Warning message #22
+24. [2025-09-03T16:30:52.872Z] Warning message #23
+25. [2025-09-03T16:30:52.875Z] Warning message #24
+26. [2025-09-03T16:30:52.875Z] Warning message #25
+27. [2025-09-03T16:30:52.876Z] Warning message #26
+28. [2025-09-03T16:30:52.877Z] Warning message #27
+29. [2025-09-03T16:30:52.877Z] Warning message #28
+30. [2025-09-03T16:30:52.878Z] Warning message #29
+31. [2025-09-03T16:30:52.878Z] Warning message #30
+32. [2025-09-03T16:30:52.878Z] Warning message #31
+33. [2025-09-03T16:30:52.879Z] Warning message #32
+34. [2025-09-03T16:30:52.880Z] Warning message #33
+35. [2025-09-03T16:30:52.881Z] Warning message #34
+36. [2025-09-03T16:30:52.881Z] Warning message #35
+37. [2025-09-03T16:30:52.882Z] Warning message #36
+38. [2025-09-03T16:30:52.882Z] Warning message #37
+39. [2025-09-03T16:30:52.883Z] Warning message #38
+40. [2025-09-03T16:30:52.883Z] Warning message #39
+41. [2025-09-03T16:30:52.883Z] Warning message #40
+42. [2025-09-03T16:30:52.884Z] Warning message #41
+43. [2025-09-03T16:30:52.884Z] Warning message #42
+44. [2025-09-03T16:30:52.884Z] Warning message #43
+45. [2025-09-03T16:30:52.887Z] Warning message #44
+46. [2025-09-03T16:30:52.892Z] Warning message #45
+47. [2025-09-03T16:30:52.892Z] Warning message #46
+48. [2025-09-03T16:30:52.893Z] Warning message #47
+49. [2025-09-03T16:30:52.893Z] Warning message #48
+50. [2025-09-03T16:30:52.893Z] Warning message #49
+51. [2025-09-03T16:30:52.894Z] Warning message #50
+52. [2025-09-03T16:30:55.165Z] Warning #1 - High memory usage detected
+53. [2025-09-03T16:30:55.332Z] Warning #2 - High memory usage detected
+54. [2025-09-03T16:30:55.528Z] Warning #3 - High memory usage detected
+55. [2025-09-03T16:30:55.733Z] Warning #4 - High memory usage detected
+56. [2025-09-03T16:30:55.934Z] Warning #5 - High memory usage detected
+57. [2025-09-03T16:30:56.134Z] Warning #6 - High memory usage detected
+58. [2025-09-03T16:30:56.333Z] Warning #7 - High memory usage detected
+59. [2025-09-03T16:30:56.533Z] Warning #8 - High memory usage detected
+60. [2025-09-03T16:30:56.732Z] Warning #9 - High memory usage detected
+61. [2025-09-03T16:30:56.933Z] Warning #10 - High memory usage detected
+62. [2025-09-03T16:30:57.132Z] Warning #11 - High memory usage detected
+63. [2025-09-03T16:30:57.330Z] Warning #12 - High memory usage detected
+64. [2025-09-03T16:30:57.530Z] Warning #13 - High memory usage detected
+65. [2025-09-03T16:30:57.731Z] Warning #14 - High memory usage detected
+66. [2025-09-03T16:30:57.930Z] Warning #15 - High memory usage detected
+67. [2025-09-03T16:30:58.132Z] Warning #16 - High memory usage detected
+68. [2025-09-03T16:30:58.335Z] Warning #17 - High memory usage detected
+69. [2025-09-03T16:30:58.532Z] Warning #18 - High memory usage detected
+70. [2025-09-03T16:30:58.732Z] Warning #19 - High memory usage detected
+71. [2025-09-03T16:30:58.930Z] Warning #20 - High memory usage detected
+72. [2025-09-03T16:30:59.132Z] Warning #21 - High memory usage detected
+73. [2025-09-03T16:30:59.334Z] Warning #22 - High memory usage detected
+74. [2025-09-03T16:30:59.532Z] Warning #23 - High memory usage detected
+75. [2025-09-03T16:30:59.732Z] Warning #24 - High memory usage detected
+76. [2025-09-03T16:30:59.933Z] Warning #25 - High memory usage detected
+77. [2025-09-03T16:31:00.963Z] Performance warning for iteration 0
+78. [2025-09-03T16:31:00.963Z] Performance warning for iteration 1
+79. [2025-09-03T16:31:00.963Z] Performance warning for iteration 2
+80. [2025-09-03T16:31:00.963Z] Performance warning for iteration 3
+81. [2025-09-03T16:31:00.964Z] Performance warning for iteration 4
+82. [2025-09-03T16:31:00.964Z] Performance warning for iteration 5
+83. [2025-09-03T16:31:00.964Z] Performance warning for iteration 6
+84. [2025-09-03T16:31:00.964Z] Performance warning for iteration 7
+85. [2025-09-03T16:31:00.964Z] Performance warning for iteration 8
+86. [2025-09-03T16:31:00.964Z] Performance warning for iteration 9
+87. [2025-09-03T16:31:00.964Z] Performance warning for iteration 10
+88. [2025-09-03T16:31:00.965Z] Performance warning for iteration 11
+89. [2025-09-03T16:31:00.965Z] Performance warning for iteration 12
+90. [2025-09-03T16:31:00.965Z] Performance warning for iteration 13
+91. [2025-09-03T16:31:00.965Z] Performance warning for iteration 14
+92. [2025-09-03T16:31:00.965Z] Performance warning for iteration 15
+93. [2025-09-03T16:31:00.965Z] Performance warning for iteration 16
+94. [2025-09-03T16:31:00.965Z] Performance warning for iteration 17
+95. [2025-09-03T16:31:00.966Z] Performance warning for iteration 18
+96. [2025-09-03T16:31:00.966Z] Performance warning for iteration 19
+97. [2025-09-03T16:31:00.966Z] Performance warning for iteration 20
+98. [2025-09-03T16:31:00.966Z] Performance warning for iteration 21
+99. [2025-09-03T16:31:00.966Z] Performance warning for iteration 22
+100. [2025-09-03T16:31:00.966Z] Performance warning for iteration 23
+101. [2025-09-03T16:31:00.966Z] Performance warning for iteration 24
+102. [2025-09-03T16:31:00.966Z] Performance warning for iteration 25
+103. [2025-09-03T16:31:00.967Z] Performance warning for iteration 26
+104. [2025-09-03T16:31:00.967Z] Performance warning for iteration 27
+105. [2025-09-03T16:31:00.967Z] Performance warning for iteration 28
+106. [2025-09-03T16:31:00.967Z] Performance warning for iteration 29
+
+ERROR MESSAGES (109):
+1. [2025-09-03T16:30:52.847Z] Error message #1
+2. [2025-09-03T16:30:52.850Z] Error message #2
+3. [2025-09-03T16:30:52.851Z] Error message #3
+4. [2025-09-03T16:30:52.853Z] Error message #4
+5. [2025-09-03T16:30:52.854Z] Error message #5
+6. [2025-09-03T16:30:52.855Z] Error message #6
+7. [2025-09-03T16:30:52.857Z] Error message #7
+8. [2025-09-03T16:30:52.860Z] Error message #8
+9. [2025-09-03T16:30:52.861Z] Error message #9
+10. [2025-09-03T16:30:52.862Z] Error message #10
+11. [2025-09-03T16:30:52.862Z] Error message #11
+12. [2025-09-03T16:30:52.863Z] Error message #12
+13. [2025-09-03T16:30:52.863Z] Error message #13
+14. [2025-09-03T16:30:52.863Z] Error message #14
+15. [2025-09-03T16:30:52.864Z] Error message #15
+16. [2025-09-03T16:30:52.865Z] Error message #16
+17. [2025-09-03T16:30:52.866Z] Error message #17
+18. [2025-09-03T16:30:52.867Z] Error message #18
+19. [2025-09-03T16:30:52.868Z] Error message #19
+20. [2025-09-03T16:30:52.868Z] Error message #20
+21. [2025-09-03T16:30:52.870Z] Error message #21
+22. [2025-09-03T16:30:52.871Z] Error message #22
+23. [2025-09-03T16:30:52.872Z] Error message #23
+24. [2025-09-03T16:30:52.875Z] Error message #24
+25. [2025-09-03T16:30:52.876Z] Error message #25
+26. [2025-09-03T16:30:52.876Z] Error message #26
+27. [2025-09-03T16:30:52.877Z] Error message #27
+28. [2025-09-03T16:30:52.877Z] Error message #28
+29. [2025-09-03T16:30:52.878Z] Error message #29
+30. [2025-09-03T16:30:52.878Z] Error message #30
+31. [2025-09-03T16:30:52.879Z] Error message #31
+32. [2025-09-03T16:30:52.879Z] Error message #32
+33. [2025-09-03T16:30:52.880Z] Error message #33
+34. [2025-09-03T16:30:52.881Z] Error message #34
+35. [2025-09-03T16:30:52.881Z] Error message #35
+36. [2025-09-03T16:30:52.882Z] Error message #36
+37. [2025-09-03T16:30:52.882Z] Error message #37
+38. [2025-09-03T16:30:52.883Z] Error message #38
+39. [2025-09-03T16:30:52.883Z] Error message #39
+40. [2025-09-03T16:30:52.883Z] Error message #40
+41. [2025-09-03T16:30:52.884Z] Error message #41
+42. [2025-09-03T16:30:52.884Z] Error message #42
+43. [2025-09-03T16:30:52.884Z] Error message #43
+44. [2025-09-03T16:30:52.891Z] Error message #44
+45. [2025-09-03T16:30:52.892Z] Error message #45
+46. [2025-09-03T16:30:52.892Z] Error message #46
+47. [2025-09-03T16:30:52.893Z] Error message #47
+48. [2025-09-03T16:30:52.893Z] Error message #48
+49. [2025-09-03T16:30:52.893Z] Error message #49
+50. [2025-09-03T16:30:52.894Z] Error message #50
+51. [2025-09-03T16:30:53.904Z] Caught error: Custom error thrown
+   Args: JSHandle:Caught error:, JSHandle:Custom error thrown
+52. [2025-09-03T16:30:53.904Z] ReferenceError: undefinedFunction is not defined
+   Args: JSHandle:ReferenceError:, JSHandle:undefinedFunction is not defined
+53. [2025-09-03T16:30:53.904Z] TypeError: Cannot set properties of null (setting 'property')
+   Args: JSHandle:TypeError:, JSHandle:Cannot set properties of null (setting 'property')
+54. [2025-09-03T16:30:53.905Z] SyntaxError: Unexpected identifier 'syntax'
+   Args: JSHandle:SyntaxError:, JSHandle:Unexpected identifier 'syntax'
+55. [2025-09-03T16:30:55.166Z] Error #1 - Connection timeout
+56. [2025-09-03T16:30:55.333Z] Error #2 - Connection timeout
+57. [2025-09-03T16:30:55.529Z] Error #3 - Connection timeout
+58. [2025-09-03T16:30:55.734Z] Error #4 - Connection timeout
+59. [2025-09-03T16:30:55.934Z] Error #5 - Connection timeout
+60. [2025-09-03T16:30:56.134Z] Error #6 - Connection timeout
+61. [2025-09-03T16:30:56.334Z] Error #7 - Connection timeout
+62. [2025-09-03T16:30:56.533Z] Error #8 - Connection timeout
+63. [2025-09-03T16:30:56.733Z] Error #9 - Connection timeout
+64. [2025-09-03T16:30:56.933Z] Error #10 - Connection timeout
+65. [2025-09-03T16:30:57.132Z] Error #11 - Connection timeout
+66. [2025-09-03T16:30:57.331Z] Error #12 - Connection timeout
+67. [2025-09-03T16:30:57.531Z] Error #13 - Connection timeout
+68. [2025-09-03T16:30:57.731Z] Error #14 - Connection timeout
+69. [2025-09-03T16:30:57.931Z] Error #15 - Connection timeout
+70. [2025-09-03T16:30:58.133Z] Error #16 - Connection timeout
+71. [2025-09-03T16:30:58.335Z] Error #17 - Connection timeout
+72. [2025-09-03T16:30:58.532Z] Error #18 - Connection timeout
+73. [2025-09-03T16:30:58.732Z] Error #19 - Connection timeout
+74. [2025-09-03T16:30:58.930Z] Error #20 - Connection timeout
+75. [2025-09-03T16:30:59.133Z] Error #21 - Connection timeout
+76. [2025-09-03T16:30:59.335Z] Error #22 - Connection timeout
+77. [2025-09-03T16:30:59.532Z] Error #23 - Connection timeout
+78. [2025-09-03T16:30:59.732Z] Error #24 - Connection timeout
+79. [2025-09-03T16:30:59.933Z] Error #25 - Connection timeout
+80. [2025-09-03T16:31:00.963Z] Simulated error in iteration 0
+81. [2025-09-03T16:31:00.963Z] Simulated error in iteration 1
+82. [2025-09-03T16:31:00.963Z] Simulated error in iteration 2
+83. [2025-09-03T16:31:00.963Z] Simulated error in iteration 3
+84. [2025-09-03T16:31:00.964Z] Simulated error in iteration 4
+85. [2025-09-03T16:31:00.964Z] Simulated error in iteration 5
+86. [2025-09-03T16:31:00.964Z] Simulated error in iteration 6
+87. [2025-09-03T16:31:00.964Z] Simulated error in iteration 7
+88. [2025-09-03T16:31:00.964Z] Simulated error in iteration 8
+89. [2025-09-03T16:31:00.964Z] Simulated error in iteration 9
+90. [2025-09-03T16:31:00.965Z] Simulated error in iteration 10
+91. [2025-09-03T16:31:00.965Z] Simulated error in iteration 11
+92. [2025-09-03T16:31:00.965Z] Simulated error in iteration 12
+93. [2025-09-03T16:31:00.965Z] Simulated error in iteration 13
+94. [2025-09-03T16:31:00.965Z] Simulated error in iteration 14
+95. [2025-09-03T16:31:00.965Z] Simulated error in iteration 15
+96. [2025-09-03T16:31:00.965Z] Simulated error in iteration 16
+97. [2025-09-03T16:31:00.965Z] Simulated error in iteration 17
+98. [2025-09-03T16:31:00.966Z] Simulated error in iteration 18
+99. [2025-09-03T16:31:00.966Z] Simulated error in iteration 19
+100. [2025-09-03T16:31:00.966Z] Simulated error in iteration 20
+101. [2025-09-03T16:31:00.966Z] Simulated error in iteration 21
+102. [2025-09-03T16:31:00.966Z] Simulated error in iteration 22
+103. [2025-09-03T16:31:00.966Z] Simulated error in iteration 23
+104. [2025-09-03T16:31:00.966Z] Simulated error in iteration 24
+105. [2025-09-03T16:31:00.966Z] Simulated error in iteration 25
+106. [2025-09-03T16:31:00.967Z] Simulated error in iteration 26
+107. [2025-09-03T16:31:00.967Z] Simulated error in iteration 27
+108. [2025-09-03T16:31:00.967Z] Simulated error in iteration 28
+109. [2025-09-03T16:31:00.967Z] Simulated error in iteration 29
+
