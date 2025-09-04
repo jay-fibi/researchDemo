@@ -1,3 +1,7 @@
+// Create circular dependency: import module1.js
+const module1 = require('./module1.js');
+console.log('Script.js loaded with module1:', module1);
+
 function updateClock() {
     const now = new Date();
     const day = now.toLocaleDateString('en-US', { weekday: 'long' });
@@ -10,3 +14,11 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+
+// Introduce syntax error: unclosed function
+function brokenFunction() {
+    console.log("This will cause a syntax error"
+
+// Introduce reference error: missing file
+const missingModule = require('./nonexistent.js');
+console.log(missingModule);
