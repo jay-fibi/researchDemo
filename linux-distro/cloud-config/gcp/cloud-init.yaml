@@ -1,0 +1,116 @@
+#cloud-config
+# GCP Cloud-Optimized Configuration
+
+# Set hostname based on GCP metadata
+hostname: ${gcp:instance-name}
+
+# Update package sources for GCP
+apt:
+  sources:
+    google-cloud-sdk:
+      source: "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main"
+      key: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
+
+# Install GCP-specific packages
+packages:
+  - google-cloud-sdk
+  - google-compute-engine-oslogin
+  - google-osconfig-agent
+  - stackdriver-agent
+  - google-fluentd
+
+# Configure GCP services
+write_files:
+  - path: /etc/google-fluentd/google-fluentd.conf
+    content: |
+      <source>
+        @type tail
+        format syslog
+        path /var/log/syslog
+        pos_file /var/lib/google-fluentd/pos/syslog.pos
+        tag syslog
+      </source>
+
+      <source>
+        @type tail
+        format none
+        path /var/log/cloud-init.log
+        pos_file /var/lib/google-fluentd/pos/cloud-init.pos
+        tag cloud-init
+      </source>
+
+      <match **>
+        @type google_cloud
+        project_id ${gcp:project-id}
+        keyfile /etc/google/auth/application_default_credentials.json
+        buffer_type file
+        buffer_path /var/spool/td-agent/buffer
+      </match>
+
+  - path: /etc/stackdriver/stackdriver.conf
+    content: |
+      {
+        "project_id": "${gcp:project-id}",
+        "service_account": {
+          "type": "service_account"
+        },
+        "collectd": {
+          "timeout": 10,
+          "read_threads": 5
+        },
+        "monitoring": {
+          "enable": true
+        },
+        "logging": {
+          "enable": true,
+          "buffer_size": 1048576
+        }
+      }
+
+# Run commands on first boot
+runcmd:
+  - systemctl enable google-osconfig-agent
+  - systemctl start google-osconfig-agent
+  - systemctl enable stackdriver-agent
+  - systemctl start stackdriver-agent
+  - systemctl enable google-fluentd
+  - systemctl start google-fluentd
+  - gcloud auth activate-service-account --key-file=/etc/google/auth/application_default_credentials.json
+  - gcloud config set project ${gcp:project-id}
+
+# Configure NTP for GCP
+ntp:
+  servers:
+    - metadata.google.internal
+
+# Mount GCP persistent disks
+mounts:
+  - [ /dev/sdb, /data, ext4, "defaults,nofail", "0", "2" ]
+
+# Configure SSH for GCP
+ssh_authorized_keys:
+  - ${gcp:ssh-keys}
+
+# GCP specific optimizations
+bootcmd:
+  - echo "google_compute_engine" >> /etc/modules
+  - modprobe google_compute_engine
+
+# Configure systemd for GCP
+write_files:
+  - path: /etc/systemd/system/gcp-optimizations.service
+    content: |
+      [Unit]
+      Description=GCP Optimizations Service
+      After=network.target
+
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/local/bin/gcp-optimize.sh
+      RemainAfterExit=yes
+
+      [Install]
+      WantedBy=multi-user.target
+
+# Final message
+final_message: "Cloud-Optimized Linux Distribution booted on GCP - Instance: ${gcp:instance-name}"

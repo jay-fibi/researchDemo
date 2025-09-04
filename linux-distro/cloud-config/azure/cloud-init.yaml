@@ -1,0 +1,96 @@
+#cloud-config
+# Azure Cloud-Optimized Configuration
+
+# Set hostname based on Azure metadata
+hostname: ${azure:vmName}
+
+# Update package sources for Azure
+apt:
+  sources:
+    azure-cli:
+      source: "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main"
+      keyid: "BC528686B50D79E339D3721CEB3E94ADBE1229CF"
+
+# Install Azure-specific packages
+packages:
+  - azure-cli
+  - walinuxagent
+  - python3-azure-storage
+  - azure-functions-core-tools-4
+
+# Configure Azure services
+write_files:
+  - path: /etc/waagent.conf
+    content: |
+      #
+      # Microsoft Azure Linux Agent Configuration
+      #
+
+      # Enable verbose logging
+      Logs.Verbose=n
+
+      # Enable extension logging
+      Logs.Console=y
+
+      # Enable agent service
+      AutoUpdate.Enabled=y
+      AutoUpdate.GAFamily=Prod
+
+      # Resource disk configuration
+      ResourceDisk.Format=y
+      ResourceDisk.Filesystem=ext4
+      ResourceDisk.MountPoint=/mnt/resource
+      ResourceDisk.EnableSwap=y
+      ResourceDisk.SwapSizeMB=2048
+
+      # Network configuration
+      OS.EnableFirewall=n
+      OS.EnableRDMA=y
+      OS.RootDeviceScsiTimeout=300
+      OS.OpensslPath=/usr/bin/openssl
+
+      # Extensions
+      Extensions.Enabled=y
+
+  - path: /etc/azure/azuremonitor.conf
+    content: |
+      {
+        "version": 1,
+        "secrets": {
+          "workspaceId": "${azure:workspaceId}",
+          "sharedKey": "${azure:sharedKey}"
+        },
+        "preview": {
+          "enable": true
+        }
+      }
+
+# Run commands on first boot
+runcmd:
+  - systemctl enable walinuxagent
+  - systemctl start walinuxagent
+  - az login --identity
+  - az account set --subscription ${azure:subscriptionId}
+
+# Configure NTP for Azure
+ntp:
+  servers:
+    - time.windows.com
+    - 0.pool.ntp.org
+    - 1.pool.ntp.org
+
+# Mount Azure disks
+mounts:
+  - [ /dev/sdc, /data, ext4, "defaults,nofail", "0", "2" ]
+
+# Configure SSH for Azure
+ssh_authorized_keys:
+  - ${azure:sshPublicKey}
+
+# Azure specific kernel parameters
+bootcmd:
+  - echo "hv_vmbus.max_version=0x7fffffff" >> /etc/default/grub
+  - update-grub
+
+# Final message
+final_message: "Cloud-Optimized Linux Distribution booted on Azure - VM: ${azure:vmName}"

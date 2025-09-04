@@ -1,0 +1,153 @@
+#!/bin/sh
+
+# Cloud-Optimized Linux Distribution Init Script
+# This script initializes the system during boot
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export PATH
+
+# Mount essential filesystems
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+
+# Create necessary directories
+mkdir -p /dev/pts /dev/shm
+mount -t devpts devpts /dev/pts
+mount -t tmpfs tmpfs /dev/shm
+
+# Set up basic networking for cloud environments
+ip link set lo up
+
+# Detect cloud provider and configure accordingly
+detect_cloud_provider() {
+    # Check for AWS
+    if curl -s --connect-timeout 2 http://169.254.169.254/latest/meta-data/ > /dev/null 2>&1; then
+        echo "AWS detected"
+        export CLOUD_PROVIDER="aws"
+        return 0
+    fi
+
+    # Check for Azure
+    if curl -s --connect-timeout 2 http://169.254.169.254/metadata/instance?api-version=2021-02-01 > /dev/null 2>&1; then
+        echo "Azure detected"
+        export CLOUD_PROVIDER="azure"
+        return 0
+    fi
+
+    # Check for GCP
+    if curl -s --connect-timeout 2 http://metadata.google.internal/computeMetadata/v1/ > /dev/null 2>&1; then
+        echo "GCP detected"
+        export CLOUD_PROVIDER="gcp"
+        return 0
+    fi
+
+    echo "No cloud provider detected, assuming generic environment"
+    export CLOUD_PROVIDER="generic"
+}
+
+# Load cloud-specific modules
+load_cloud_modules() {
+    case $CLOUD_PROVIDER in
+        aws)
+            modprobe virtio_blk
+            modprobe virtio_net
+            modprobe virtio_console
+            modprobe xen-blkfront
+            modprobe xen-netfront
+            ;;
+        azure)
+            modprobe hv_storvsc
+            modprobe hv_netvsc
+            modprobe hv_utils
+            modprobe hv_balloon
+            ;;
+        gcp)
+            modprobe virtio_blk
+            modprobe virtio_net
+            modprobe virtio_console
+            ;;
+        *)
+            # Generic cloud modules
+            modprobe virtio_blk
+            modprobe virtio_net
+            ;;
+    esac
+}
+
+# Configure network for cloud provider
+configure_network() {
+    case $CLOUD_PROVIDER in
+        aws)
+            # AWS EC2 networking
+            dhclient eth0 2>/dev/null || udhcpc -i eth0
+            ;;
+        azure)
+            # Azure networking
+            dhclient eth0 2>/dev/null || udhcpc -i eth0
+            ;;
+        gcp)
+            # GCP networking
+            dhclient eth0 2>/dev/null || udhcpc -i eth0
+            ;;
+        *)
+            # Generic networking
+            for iface in $(ls /sys/class/net/ | grep -v lo); do
+                dhclient $iface 2>/dev/null || udhcpc -i $iface
+            done
+            ;;
+    esac
+}
+
+# Mount root filesystem
+mount_root() {
+    # Try different root devices based on cloud provider
+    case $CLOUD_PROVIDER in
+        aws)
+            # AWS EBS or instance store
+            root_dev="/dev/xvda1"
+            if [ ! -b $root_dev ]; then
+                root_dev="/dev/sda1"
+            fi
+            ;;
+        azure)
+            # Azure OS disk
+            root_dev="/dev/sda1"
+            ;;
+        gcp)
+            # GCP persistent disk
+            root_dev="/dev/sda1"
+            ;;
+        *)
+            # Generic
+            root_dev="/dev/sda1"
+            ;;
+    esac
+
+    # Mount root filesystem
+    mount -t ext4 $root_dev /mnt/root 2>/dev/null || \
+    mount -t xfs $root_dev /mnt/root 2>/dev/null || \
+    mount -t btrfs $root_dev /mnt/root
+
+    if [ $? -ne 0 ]; then
+        echo "Failed to mount root filesystem"
+        exec /bin/sh
+    fi
+}
+
+# Main initialization
+main() {
+    echo "Cloud-Optimized Linux Distribution booting..."
+
+    detect_cloud_provider
+    load_cloud_modules
+    configure_network
+    mount_root
+
+    # Switch to real root
+    echo "Switching to real root filesystem..."
+    exec switch_root /mnt/root /sbin/init
+}
+
+# Run main function
+main
