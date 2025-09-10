@@ -3,29 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page with Console Logs</title>
+    <title>Test Page with Interactive Elements</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
             background-color: #f0f0f0;
+            min-height: 2000px; /* Make page scrollable */
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         #clock {
-            font-size: 2em;
+            font-size: 1.5em;
             margin: 20px 0;
+            text-align: center;
         }
         button {
             padding: 10px 20px;
             font-size: 1em;
             cursor: pointer;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        #triggerBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #submitBtn {
+            background-color: #2196F3;
+            color: white;
+        }
+        input[type="text"] {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f5e8;
+            border-radius: 4px;
+            display: none;
+        }
+        .scroll-content {
+            height: 1000px;
+            background: linear-gradient(to bottom, #ffcccc, #ccffcc);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>Test Page for Browser Automation</h1>
-    <p>This page will produce console logs and change appearance.</p>
-    <div id="clock"></div>
-    <button id="triggerBtn">Trigger JavaScript Action</button>
+    <div class="container">
+        <h1>Test Page for Browser Automation</h1>
+        <p>This page contains interactive elements for testing browser automation.</p>
+
+        <div id="clock"></div>
+
+        <button id="triggerBtn">Click Me!</button>
+
+        <form id="testForm">
+            <label for="nameInput">Enter your name:</label>
+            <input type="text" id="nameInput" name="name" placeholder="Type your name here">
+
+            <button type="submit" id="submitBtn">Submit Form</button>
+        </form>
+
+        <div id="result" class="result">
+            <h3>Form Submitted!</h3>
+            <p id="resultText"></p>
+        </div>
+    </div>
+
+    <div class="scroll-content">
+        Scroll down to see this content!
+    </div>
 
     <script>
         console.log('Page loaded, initial console log.');
@@ -49,8 +115,26 @@
         document.getElementById('triggerBtn').addEventListener('click', function() {
             console.log('Button clicked, triggering action.');
             document.body.style.backgroundColor = '#ffcccc';
-            console.log('Page has been updated with new background color.');
-            console.log('Action completed.');
+            alert('Button was clicked!');
+            console.log('Button click action completed.');
+        });
+
+        // Form submit handler
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('nameInput').value;
+            console.log('Form submitted with name:', name);
+
+            // Show result
+            const resultDiv = document.getElementById('result');
+            const resultText = document.getElementById('resultText');
+            resultText.textContent = `Hello, ${name}! Your form has been submitted successfully.`;
+            resultDiv.style.display = 'block';
+
+            // Clear form
+            document.getElementById('nameInput').value = '';
+
+            console.log('Form submission completed.');
         });
 
         console.log('JavaScript initialization complete.');

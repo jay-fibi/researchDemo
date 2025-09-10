@@ -1,0 +1,34 @@
+# Sample Text for Regex Operations
+
+## Basic Patterns
+This is a simple sentence with numbers like 123 and 456.
+Email addresses: user@example.com, test.email@domain.org
+URLs: https://example.com, http://test.org/page
+
+## Lookaheads and Lookbehinds
+Password: strongPassword123! (must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character)
+Date: 2025-05-09 (YYYY-MM-DD format)
+Phone: +1 (555) 123-4567 (international format)
+
+## Multi-line Patterns
+This is a paragraph with multiple lines.
+It spans across several lines.
+Each line has different content.
+
+Another paragraph:
+This is the first line.
+This is the second line.
+This is the third line.
+
+## Capture Groups
+User information:
+Name: John Doe
+Age: 30
+Email: john.doe@example.com
+Address: 123 Main St, Anytown, USA
+
+Product information:
+ID: PROD-12345
+Name: Premium Widget
+Price: $19.99
+In stock: Yes
