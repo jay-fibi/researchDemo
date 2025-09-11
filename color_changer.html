@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Changer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .container {
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .color-info {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Color Changer</h1>
+        <p>Click anywhere on the page to change the background color!</p>
+        <div class="color-info" id="colorDisplay">Current Color: #FFFFFF</div>
+    </div>
+
+    <script>
+        function getRandomBrightColor() {
+            // Generate random RGB values with high saturation for bright colors
+            const r = Math.floor(Math.random() * 156) + 100; // 100-255
+            const g = Math.floor(Math.random() * 156) + 100; // 100-255
+            const b = Math.floor(Math.random() * 156) + 100; // 100-255
+
+            return {
+                rgb: `rgb(${r}, ${g}, ${b})`,
+                hex: `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`
+            };
+        }
+
+        function changeBackgroundColor() {
+            const color = getRandomBrightColor();
+            document.body.style.backgroundColor = color.rgb;
+            document.getElementById('colorDisplay').textContent = `Current Color: ${color.hex}`;
+        }
+
+        // Change color on page load
+        changeBackgroundColor();
+
+        // Change color on click anywhere on the page
+        document.body.addEventListener('click', changeBackgroundColor);
+    </script>
+</body>
+</html>
