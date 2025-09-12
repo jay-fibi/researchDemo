@@ -1,24 +1,38 @@
-// Create circular dependency: import module1.js
-const module1 = require('./module1.js');
-console.log('Script.js loaded with module1:', module1);
+const wallpapers = [
+    "https://picsum.photos/seed/beach1/1920/1080.jpg",
+    "https://picsum.photos/seed/beach2/1920/1080.jpg",
+    "https://picsum.photos/seed/beach3/1920/1080.jpg",
+    "https://picsum.photos/seed/beach4/1920/1080.jpg",
+    "https://picsum.photos/seed/beach5/1920/1080.jpg"
+];
 
-function updateClock() {
-    const now = new Date();
-    const day = now.toLocaleDateString('en-US', { weekday: 'long' });
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-    document.getElementById('day').innerHTML = `Today is ${day}`;
-    document.getElementById('clock').innerHTML = `${hours}:${minutes}:${seconds}`;
+const container = document.getElementById("wallpaper-container");
+let currentIndex = 0;
+
+function changeWallpaper() {
+    const wallpaper = document.createElement("div");
+    wallpaper.style.backgroundImage = `url(${wallpapers[currentIndex]})`;
+    wallpaper.style.backgroundSize = "cover";
+    wallpaper.style.backgroundPosition = "center";
+    wallpaper.style.width = "100%";
+    wallpaper.style.height = "100vh";
+    wallpaper.style.position = "absolute";
+    wallpaper.style.top = "0";
+    wallpaper.style.left = "0";
+    wallpaper.style.opacity = "0";
+    wallpaper.style.transition = "opacity 1.5s ease-in-out";
+    
+    container.appendChild(wallpaper);
+    
+    setTimeout(() => {
+        wallpaper.style.opacity = "1";
+    }, 100);
+    
+    setTimeout(() => {
+        container.innerHTML = "";
+        currentIndex = (currentIndex + 1) % wallpapers.length;
+        changeWallpaper();
+    }, 8000);
 }
 
-setInterval(updateClock, 1000);
-updateClock();
-
-// Introduce syntax error: unclosed function
-function brokenFunction() {
-    console.log("This will cause a syntax error"
-
-// Introduce reference error: missing file
-const missingModule = require('./nonexistent.js');
-console.log(missingModule);
+changeWallpaper();

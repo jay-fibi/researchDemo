@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Stock Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Panel -->
+        <div id="login-panel" class="login-panel">
+            <div class="login-form">
+                <h2>Login to Dashboard</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <p id="login-message"></p>
+            </div>
+        </div>
+
+        <!-- Main Dashboard -->
+        <div id="dashboard" class="dashboard hidden">
+            <header class="header">
+                <h1>Weather & Stock Dashboard</h1>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </header>
+
+            <main class="main-content">
+                <!-- Weather Section -->
+                <section class="weather-section">
+                    <h2>Weather Control</h2>
+                    <div class="weather-controls">
+                        <input type="text" id="city-input" placeholder="Enter city name" class="city-input">
+                        <button id="get-weather-btn" class="weather-btn">Get Weather</button>
+                        <select id="unit-select" class="unit-select">
+                            <option value="metric">Celsius</option>
+                            <option value="imperial">Fahrenheit</option>
+                        </select>
+                    </div>
+                    <div id="weather-display" class="weather-display">
+                        <div class="weather-info">
+                            <h3 id="city-name">City Name</h3>
+                            <div class="weather-details">
+                                <div class="temp">
+                                    <span id="temperature">--</span>
+                                    <span id="unit">°C</span>
+                                </div>
+                                <div class="description">
+                                    <img id="weather-icon" src="" alt="Weather Icon">
+                                    <span id="weather-description">Weather Description</span>
+                                </div>
+                                <div class="additional-info">
+                                    <p>Humidity: <span id="humidity">--</span>%</p>
+                                    <p>Wind Speed: <span id="wind-speed">--</span> m/s</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Stock Ticker Section -->
+                <section class="stock-section">
+                    <h2>Stock Ticker</h2>
+                    <div class="stock-controls">
+                        <input type="text" id="stock-symbol" placeholder="Enter stock symbol (e.g., AAPL)" class="stock-input">
+                        <button id="get-stock-btn" class="stock-btn">Get Stock Data</button>
+                    </div>
+                    <div id="stock-display" class="stock-display">
+                        <div class="stock-info">
+                            <h3 id="stock-name">Stock Name</h3>
+                            <div class="stock-details">
+                                <div class="stock-price">
+                                    <span id="current-price">--</span>
+                                    <span id="price-change" class="price-change">--</span>
+                                </div>
+                                <div class="stock-stats">
+                                    <p>Open: <span id="open-price">--</span></p>
+                                    <p>High: <span id="high-price">--</span></p>
+                                    <p>Low: <span id="low-price">--</span></p>
+                                    <p>Volume: <span id="volume">--</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

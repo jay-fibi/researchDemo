@@ -1,4 +1,26 @@
 class Calculator {
+    // Constants
+    static MAX_HISTORY_LENGTH = 50;
+    static WATER_DROPLETS_COUNT = 5;
+    static DROPLET_ANIMATION_DELAY = 50;
+    static DROPLET_LIFETIME = 1500;
+    static ERROR_DISPLAY_DURATION = 2000;
+    static FADE_ANIMATION_DELAY = 10;
+
+    static OPERATION_SYMBOLS = {
+        add: '+',
+        subtract: '−',
+        multiply: '×',
+        divide: '÷'
+    };
+
+    static KEYBOARD_OPERATIONS = {
+        '+': 'add',
+        '-': 'subtract',
+        '*': 'multiply',
+        '/': 'divide'
+    };
+
     constructor() {
         this.current = '0';
         this.previous = '';
@@ -61,22 +83,36 @@ class Calculator {
     }
 
     appendNumber(number) {
+        if (!this.isValidNumberInput(number)) {
+            return;
+        }
+
         // Add water splash effect for number buttons
         this.createWaterSplash();
 
         if (this.shouldResetDisplay) {
             this.current = number;
             this.shouldResetDisplay = false;
-        } else {
-            if (this.current === '0' && number !== '.') {
-                this.current = number;
-            } else {
-                // Prevent multiple decimal points
-                if (number === '.' && this.current.includes('.')) return;
-                this.current += number;
-            }
+        } else if (this.current === '0' && number !== '.') {
+            this.current = number;
+        } else if (!this.wouldCreateInvalidDecimal(number)) {
+            this.current += number;
         }
+
         this.updateDisplay();
+    }
+
+    isValidNumberInput(number) {
+        return typeof number === 'string' && (/^[0-9]$/.test(number) || number === '.');
+    }
+
+    /**
+     * Checks if appending a decimal point would create an invalid number
+     * @param {string} number - The number input to validate
+     * @returns {boolean} True if it would create an invalid decimal
+     */
+    wouldCreateInvalidDecimal(number) {
+        return number === '.' && this.current.includes('.');
     }
 
     handleAction(action) {
@@ -127,6 +163,10 @@ class Calculator {
         this.updateDisplay();
     }
 
+    /**
+     * Sets the current operation and prepares for the next number input
+     * @param {string} operation - The operation to perform (add, subtract, multiply, divide)
+     */
     chooseOperation(operation) {
         if (this.current === '0') return;
 
@@ -138,16 +178,12 @@ class Calculator {
         this.previous = this.current;
         this.shouldResetDisplay = true;
 
-        const operationSymbols = {
-            add: '+',
-            subtract: '−',
-            multiply: '×',
-            divide: '÷'
-        };
-
-        this.historyDisplay.textContent = `${this.formatNumber(this.previous)} ${operationSymbols[operation]}`;
+        this.historyDisplay.textContent = `${this.formatNumber(this.previous)} ${Calculator.OPERATION_SYMBOLS[operation]}`;
     }
 
+    /**
+     * Performs the calculation based on the current operation and updates the display
+     */
     calculate() {
         let result;
         const prev = parseFloat(this.previous);
@@ -177,22 +213,15 @@ class Calculator {
         }
 
         // Add to history
-        const operationSymbols = {
-            add: '+',
-            subtract: '−',
-            multiply: '×',
-            divide: '÷'
-        };
-
         const historyEntry = {
-            expression: `${this.formatNumber(this.previous)} ${operationSymbols[this.operation]} ${this.formatNumber(this.current)}`,
+            expression: `${this.formatNumber(this.previous)} ${Calculator.OPERATION_SYMBOLS[this.operation]} ${this.formatNumber(this.current)}`,
             result: result,
             timestamp: new Date().toLocaleTimeString()
         };
 
         this.history.unshift(historyEntry);
-        if (this.history.length > 50) {
-            this.history = this.history.slice(0, 50);
+        if (this.history.length > Calculator.MAX_HISTORY_LENGTH) {
+            this.history = this.history.slice(0, Calculator.MAX_HISTORY_LENGTH);
         }
 
         this.saveToStorage();
@@ -206,12 +235,19 @@ class Calculator {
         this.updateDisplay();
     }
 
+    /**
+     * Formats a number for display with proper thousand separators
+     * @param {number|string} number - The number to format
+     * @returns {string} The formatted number string
+     */
     formatNumber(number) {
+        if (number === null || number === undefined) return '0';
+
         const stringNumber = number.toString();
-        const integerDigits = parseFloat(stringNumber.split('.')[0]);
-        const decimalDigits = stringNumber.split('.')[1];
+        const [integerPart, decimalPart] = stringNumber.split('.');
 
         let integerDisplay;
+        const integerDigits = parseFloat(integerPart);
 
         if (isNaN(integerDigits)) {
             integerDisplay = '';
@@ -221,13 +257,12 @@ class Calculator {
             });
         }
 
-        if (decimalDigits != null) {
-            return `${integerDisplay}.${decimalDigits}`;
-        } else {
-            return integerDisplay;
-        }
+        return decimalPart != null ? `${integerDisplay}.${decimalPart}` : integerDisplay;
     }
 
+    /**
+     * Updates the display with the current value and applies fade-in animation
+     */
     updateDisplay() {
         this.display.textContent = this.formatNumber(this.current);
 
@@ -235,18 +270,26 @@ class Calculator {
         this.display.style.animation = 'none';
         setTimeout(() => {
             this.display.style.animation = 'fadeIn 0.3s ease';
-        }, 10);
+        }, Calculator.FADE_ANIMATION_DELAY);
     }
 
+    /**
+     * Displays an error message for a specified duration
+     * @param {string} message - The error message to display
+     */
     showError(message) {
         this.display.textContent = message;
         this.display.style.color = 'var(--btn-clear)';
         setTimeout(() => {
             this.display.style.color = 'var(--text-primary)';
             this.clearAll();
-        }, 2000);
+        }, Calculator.ERROR_DISPLAY_DURATION);
     }
 
+    /**
+     * Handles keyboard input for calculator operations
+     * @param {KeyboardEvent} e - The keyboard event
+     */
     handleKeyboard(e) {
         if (e.key >= '0' && e.key <= '9') {
             this.appendNumber(e.key);
@@ -260,17 +303,8 @@ class Calculator {
             this.clearAll();
         } else if (e.key === 'c' || e.key === 'C') {
             this.clear();
-        } else {
-            const operations = {
-                '+': 'add',
-                '-': 'subtract',
-                '*': 'multiply',
-                '/': 'divide'
-            };
-
-            if (operations[e.key]) {
-                this.chooseOperation(operations[e.key]);
-            }
+        } else if (Calculator.KEYBOARD_OPERATIONS[e.key]) {
+            this.chooseOperation(Calculator.KEYBOARD_OPERATIONS[e.key]);
         }
     }
 
@@ -326,19 +360,32 @@ class Calculator {
         this.updateHistoryDisplay();
     }
 
+    /**
+     * Saves the current history to localStorage with error handling
+     */
     saveToStorage() {
-        localStorage.setItem('calculator-history', JSON.stringify(this.history));
-    }
-
-    createWaterSplash() {
-        // Create multiple water droplets for splash effect
-        for (let i = 0; i < 5; i++) {
-            setTimeout(() => {
-                this.createDroplet();
-            }, i * 50);
+        try {
+            localStorage.setItem('calculator-history', JSON.stringify(this.history));
+        } catch (error) {
+            console.warn('Failed to save calculator history to localStorage:', error);
         }
     }
 
+    /**
+     * Creates a water splash effect with multiple droplets
+     */
+    createWaterSplash() {
+        // Create multiple water droplets for splash effect
+        for (let i = 0; i < Calculator.WATER_DROPLETS_COUNT; i++) {
+            setTimeout(() => {
+                this.createDroplet();
+            }, i * Calculator.DROPLET_ANIMATION_DELAY);
+        }
+    }
+
+    /**
+     * Creates a single water droplet with random properties
+     */
     createDroplet() {
         const droplet = document.createElement('div');
         droplet.className = 'water-droplet';
@@ -365,18 +412,41 @@ class Calculator {
             if (droplet.parentNode) {
                 droplet.parentNode.removeChild(droplet);
             }
-        }, 1500);
+        }, Calculator.DROPLET_LIFETIME);
     }
 
+    /**
+     * Loads calculator state from localStorage with error handling
+     */
     loadFromStorage() {
-        // Load theme
-        const savedTheme = localStorage.getItem('calculator-theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
+        try {
+            // Load theme
+            const savedTheme = localStorage.getItem('calculator-theme');
+            if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
 
-        // Load history
-        const savedHistory = localStorage.getItem('calculator-history');
-        if (savedHistory) {
-            this.history = JSON.parse(savedHistory);
+            // Load history
+            const savedHistory = localStorage.getItem('calculator-history');
+            if (savedHistory) {
+                const parsedHistory = JSON.parse(savedHistory);
+                if (Array.isArray(parsedHistory)) {
+                    // Validate and filter history entries
+                    this.history = parsedHistory.filter(entry =>
+                        entry &&
+                        typeof entry.expression === 'string' &&
+                        typeof entry.result === 'number' &&
+                        typeof entry.timestamp === 'string'
+                    ).slice(0, Calculator.MAX_HISTORY_LENGTH);
+                }
+            }
+        } catch (error) {
+            console.warn('Failed to load calculator data from localStorage:', error);
+            // Reset to defaults if loading fails
+            document.documentElement.setAttribute('data-theme', 'light');
+            this.history = [];
         }
     }
 }
