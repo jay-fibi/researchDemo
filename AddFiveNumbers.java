@@ -8,6 +8,6 @@ public class AddFiveNumbers {
 
         int sum = num1 + num2 + num3 + num4 + num5;
 
-        System.out.println("The sum of the five numbers is: " + sum);
+        System.out.println("The sum of the five numbers is: " + sum)
     }
 }

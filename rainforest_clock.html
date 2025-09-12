@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Clock</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #clock {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4em;
+            color: white;
+            text-shadow: 0 0 20px rgba(255,255,255,0.8), 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: bold;
+            z-index: 5;
+        }
+        #login-panel {
+            position: fixed;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            gap: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        .login-link {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        .search-form {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .search-form input, .search-form button {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        .search-form input {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        .search-form button {
+            background: #4285f4;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        #ticker {
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.8);
+            color: black;
+            padding: 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            z-index: 9;
+            animation: scroll 20s linear infinite;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .droplet {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 20;
+            animation: droplet 1s ease-out forwards;
+        }
+        @keyframes droplet {
+            0% { transform: scale(0); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.8; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Sky Clock</h1><form action="https://www.google.com/search" method="get" class="search-form"><input type="text" name="q" placeholder="Search Google"><button type="submit">Search</button></form></header>
+    <div id="clock"></div>
+    <div id="login-panel">
+        <a href="#" onclick="alert('Google login')" class="login-link"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" class="logo"></a>
+        <a href="#" onclick="alert('Facebook login')" class="login-link"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="logo"></a>
+        <a href="#" onclick="alert('X login')" class="login-link"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X" class="logo"></a>
+    </div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            document.getElementById('clock').textContent = time;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        document.body.addEventListener('click', function(e) {
+            const droplet = document.createElement('div');
+            droplet.className = 'droplet';
+            droplet.style.left = (e.clientX - 5) + 'px';
+            droplet.style.top = (e.clientY - 5) + 'px';
+            document.body.appendChild(droplet);
+            setTimeout(() => {
+                droplet.remove();
+            }, 1000);
+        });
+    </script>
+    <div id="ticker">NASDAQ: AAPL 150.00 +1.23 | MSFT 300.00 -0.50 | TSLA 250.00 +2.10 | AMZN 3200.00 +0.75 | GOOGL 2800.00 -0.45 | NVDA 500.00 +5.20 | META 330.00 -1.10 | NFLX 400.00 -0.80 | ...</div>
+    <footer><p>&copy; 2025 Sky Clock. All rights reserved.</p></footer>
+</body>
+</html>
