@@ -3,8 +3,12 @@ const wallpapers = [
     "https://picsum.photos/seed/beach2/1920/1080.jpg",
     "https://picsum.photos/seed/beach3/1920/1080.jpg",
     "https://picsum.photos/seed/beach4/1920/1080.jpg",
-    "https://picsum.photos/seed/beach5/1920/1080.jpg"
+    "https://picsum.photos/seed/beach5/1920/1080.jpg",
+    "https://picsum.photos/seed/mountain1/1920/1080.jpg"
 ];
+
+// Added console logging for debugging
+console.log("Wallpaper changer initialized with", wallpapers.length, "images");
 
 const container = document.getElementById("wallpaper-container");
 let currentIndex = 0;
