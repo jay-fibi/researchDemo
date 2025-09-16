@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .current-day {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .calendar {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .header h2 {
+            margin: 0;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        .today {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .other-month {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="current-day" id="currentDay"></div>
+    <div class="calendar">
+        <div class="header">
+            <button id="prevBtn"><</button>
+            <h2 id="monthYear"></h2>
+            <button id="nextBtn">></button>
+        </div>
+        <table id="calendarTable">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const currentDayElement = document.getElementById('currentDay');
+        const monthYearElement = document.getElementById('monthYear');
+        const calendarBody = document.getElementById('calendarBody');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentDate = new Date();
+
+        function updateCurrentDay() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            currentDayElement.textContent = currentDate.toLocaleDateString('en-US', options);
+        }
+
+        function renderCalendar(date) {
+            const year = date.getFullYear();
+            const month = date.getMonth();
+
+            // Update month and year header
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                                'July', 'August', 'September', 'October', 'November', 'December'];
+            monthYearElement.textContent = `${monthNames[month]} ${year}`;
+
+            // Clear previous calendar
+            calendarBody.innerHTML = '';
+
+            // Get first day of the month and last day
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const startDate = new Date(firstDay);
+            startDate.setDate(startDate.getDate() - firstDay.getDay());
+
+            const endDate = new Date(lastDay);
+            endDate.setDate(endDate.getDate() + (6 - lastDay.getDay()));
+
+            let currentWeek = document.createElement('tr');
+            let dayCount = 0;
+
+            for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+                const cell = document.createElement('td');
+                cell.textContent = d.getDate();
+
+                if (d.getMonth() !== month) {
+                    cell.classList.add('other-month');
+                } else if (d.toDateString() === new Date().toDateString()) {
+                    cell.classList.add('today');
+                }
+
+                currentWeek.appendChild(cell);
+                dayCount++;
+
+                if (dayCount % 7 === 0) {
+                    calendarBody.appendChild(currentWeek);
+                    currentWeek = document.createElement('tr');
+                }
+            }
+
+            if (currentWeek.children.length > 0) {
+                calendarBody.appendChild(currentWeek);
+            }
+        }
+
+        function changeMonth(delta) {
+            currentDate.setMonth(currentDate.getMonth() + delta);
+            renderCalendar(currentDate);
+            updateCurrentDay();
+        }
+
+        prevBtn.addEventListener('click', () => changeMonth(-1));
+        nextBtn.addEventListener('click', () => changeMonth(1));
+
+        // Initial render
+        updateCurrentDay();
+        renderCalendar(currentDate);
+    </script>
+</body>
+</html>
