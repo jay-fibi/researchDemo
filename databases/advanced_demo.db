@@ -1,0 +1,103 @@
+{
+  "name": "advanced_demo",
+  "tables": {
+    "employees": {
+      "name": "employees",
+      "schema": {
+        "name": "str",
+        "department": "str",
+        "salary": "int",
+        "years_experience": "int"
+      },
+      "records": {
+        "c2591da0-46dd-48a9-966e-9ff796e48c72": {
+          "id": "c2591da0-46dd-48a9-966e-9ff796e48c72",
+          "data": {
+            "name": "Alice Smith",
+            "department": "Engineering",
+            "salary": 95000,
+            "years_experience": 5
+          },
+          "created_at": "2025-09-18T00:37:27.424015",
+          "updated_at": "2025-09-18T00:37:27.424019"
+        },
+        "1873cc85-b6a6-478c-980a-21b17381bbc7": {
+          "id": "1873cc85-b6a6-478c-980a-21b17381bbc7",
+          "data": {
+            "name": "Bob Johnson",
+            "department": "Engineering",
+            "salary": 85000,
+            "years_experience": 3
+          },
+          "created_at": "2025-09-18T00:37:27.424027",
+          "updated_at": "2025-09-18T00:37:27.424027"
+        },
+        "eb8f6fb2-2900-47b1-a222-3dfba67a307d": {
+          "id": "eb8f6fb2-2900-47b1-a222-3dfba67a307d",
+          "data": {
+            "name": "Carol Davis",
+            "department": "Marketing",
+            "salary": 70000,
+            "years_experience": 4
+          },
+          "created_at": "2025-09-18T00:37:27.424032",
+          "updated_at": "2025-09-18T00:37:27.424032"
+        },
+        "2230ed55-b7e3-4ae5-a500-d7d569842848": {
+          "id": "2230ed55-b7e3-4ae5-a500-d7d569842848",
+          "data": {
+            "name": "David Wilson",
+            "department": "Sales",
+            "salary": 60000,
+            "years_experience": 2
+          },
+          "created_at": "2025-09-18T00:37:27.424036",
+          "updated_at": "2025-09-18T00:37:27.424037"
+        },
+        "0704259b-dd33-43d9-8d70-4b93185818d4": {
+          "id": "0704259b-dd33-43d9-8d70-4b93185818d4",
+          "data": {
+            "name": "Eve Brown",
+            "department": "Engineering",
+            "salary": 105000,
+            "years_experience": 8
+          },
+          "created_at": "2025-09-18T00:37:27.424041",
+          "updated_at": "2025-09-18T00:37:27.424042"
+        }
+      },
+      "indexes": {
+        "department": {
+          "Engineering": [
+            "c2591da0-46dd-48a9-966e-9ff796e48c72",
+            "1873cc85-b6a6-478c-980a-21b17381bbc7",
+            "0704259b-dd33-43d9-8d70-4b93185818d4"
+          ],
+          "Marketing": [
+            "eb8f6fb2-2900-47b1-a222-3dfba67a307d"
+          ],
+          "Sales": [
+            "2230ed55-b7e3-4ae5-a500-d7d569842848"
+          ]
+        },
+        "salary": {
+          "95000": [
+            "c2591da0-46dd-48a9-966e-9ff796e48c72"
+          ],
+          "85000": [
+            "1873cc85-b6a6-478c-980a-21b17381bbc7"
+          ],
+          "70000": [
+            "eb8f6fb2-2900-47b1-a222-3dfba67a307d"
+          ],
+          "60000": [
+            "2230ed55-b7e3-4ae5-a500-d7d569842848"
+          ],
+          "105000": [
+            "0704259b-dd33-43d9-8d70-4b93185818d4"
+          ]
+        }
+      }
+    }
+  }
+}

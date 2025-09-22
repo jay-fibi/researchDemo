@@ -1,0 +1,28 @@
+{
+  "name": "validation_demo",
+  "tables": {
+    "users": {
+      "name": "users",
+      "schema": {
+        "name": "str",
+        "age": "int",
+        "email": "str",
+        "active": "bool"
+      },
+      "records": {
+        "d7b3d09f-ea1b-4086-ab99-08a4d9c53eca": {
+          "id": "d7b3d09f-ea1b-4086-ab99-08a4d9c53eca",
+          "data": {
+            "name": "Alice",
+            "age": 25,
+            "email": "alice@example.com",
+            "active": true
+          },
+          "created_at": "2025-09-18T00:37:27.351751",
+          "updated_at": "2025-09-18T00:37:27.351753"
+        }
+      },
+      "indexes": {}
+    }
+  }
+}

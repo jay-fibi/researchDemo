@@ -1,0 +1,87 @@
+{
+  "name": "test_db",
+  "tables": {
+    "users": {
+      "name": "users",
+      "schema": {
+        "name": "str",
+        "email": "str",
+        "age": "int"
+      },
+      "records": {
+        "e430a725-8074-43c4-94a5-5a25f1285b84": {
+          "id": "e430a725-8074-43c4-94a5-5a25f1285b84",
+          "data": {
+            "name": "John Doe",
+            "email": "john@example.com",
+            "age": 31,
+            "city": "New York"
+          },
+          "created_at": "2025-09-18T00:35:22.731020",
+          "updated_at": "2025-09-18T00:35:22.731069"
+        },
+        "550720af-e5dd-4569-ae95-5e0bf8acc1fe": {
+          "id": "550720af-e5dd-4569-ae95-5e0bf8acc1fe",
+          "data": {
+            "name": "Jane Smith",
+            "email": "jane@example.com",
+            "age": 25
+          },
+          "created_at": "2025-09-18T00:35:22.731036",
+          "updated_at": "2025-09-18T00:35:22.731037"
+        },
+        "c7c77d11-cc62-4497-9363-a12234e57836": {
+          "id": "c7c77d11-cc62-4497-9363-a12234e57836",
+          "data": {
+            "name": "Bob Johnson",
+            "email": "bob@example.com",
+            "age": 35
+          },
+          "created_at": "2025-09-18T00:35:22.731045",
+          "updated_at": "2025-09-18T00:35:22.731045"
+        }
+      },
+      "indexes": {
+        "email": {
+          "jane@example.com": [
+            "550720af-e5dd-4569-ae95-5e0bf8acc1fe"
+          ],
+          "bob@example.com": [
+            "c7c77d11-cc62-4497-9363-a12234e57836"
+          ]
+        }
+      }
+    },
+    "posts": {
+      "name": "posts",
+      "schema": {
+        "title": "str",
+        "content": "str",
+        "user_id": "str"
+      },
+      "records": {
+        "5da6b5ed-9237-4c24-9355-886e81526d2a": {
+          "id": "5da6b5ed-9237-4c24-9355-886e81526d2a",
+          "data": {
+            "title": "My First Post",
+            "content": "Hello world!",
+            "user_id": "e430a725-8074-43c4-94a5-5a25f1285b84"
+          },
+          "created_at": "2025-09-18T00:35:22.731080",
+          "updated_at": "2025-09-18T00:35:22.731080"
+        },
+        "34e52095-0e1d-4b8b-865d-1c1f80ea0dfc": {
+          "id": "34e52095-0e1d-4b8b-865d-1c1f80ea0dfc",
+          "data": {
+            "title": "Python Tutorial",
+            "content": "Learning Python is fun!",
+            "user_id": "550720af-e5dd-4569-ae95-5e0bf8acc1fe"
+          },
+          "created_at": "2025-09-18T00:35:22.731087",
+          "updated_at": "2025-09-18T00:35:22.731087"
+        }
+      },
+      "indexes": {}
+    }
+  }
+}
