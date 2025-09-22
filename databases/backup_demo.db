@@ -1,0 +1,36 @@
+{
+  "name": "backup_demo",
+  "tables": {
+    "inventory": {
+      "name": "inventory",
+      "schema": {
+        "item": "str",
+        "quantity": "int",
+        "location": "str"
+      },
+      "records": {
+        "e025d305-778f-42a2-9dfe-a5bab4b20a86": {
+          "id": "e025d305-778f-42a2-9dfe-a5bab4b20a86",
+          "data": {
+            "item": "Widget A",
+            "quantity": 100,
+            "location": "Warehouse 1"
+          },
+          "created_at": "2025-09-18T00:37:27.351901",
+          "updated_at": "2025-09-18T00:37:27.351902"
+        },
+        "57968644-f20b-4e16-a1e6-12e46a3443a9": {
+          "id": "57968644-f20b-4e16-a1e6-12e46a3443a9",
+          "data": {
+            "item": "Widget B",
+            "quantity": 50,
+            "location": "Warehouse 2"
+          },
+          "created_at": "2025-09-18T00:37:27.351906",
+          "updated_at": "2025-09-18T00:37:27.351907"
+        }
+      },
+      "indexes": {}
+    }
+  }
+}

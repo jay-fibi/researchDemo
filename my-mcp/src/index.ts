@@ -16,6 +16,11 @@ import {
 import express from 'express';
 import cors from 'cors';
 
+// Shared state for testing MCP scenarios
+let sharedResource = "initial value";
+let exclusiveLock = false;
+let lastToolCalled = "";
+
 // Check if we should run as HTTP server
 const isHttpServer = process.argv.includes('--http');
 const port = process.env.PORT || 3001;
@@ -74,6 +79,75 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             }
           },
           required: ["name"]
+        }
+      },
+      {
+        name: "read_shared_resource",
+        description: "Read the shared resource",
+        inputSchema: {
+          type: "object",
+          properties: {},
+          required: []
+        }
+      },
+      {
+        name: "write_shared_resource",
+        description: "Write to the shared resource",
+        inputSchema: {
+          type: "object",
+          properties: {
+            value: {
+              type: "string",
+              description: "Value to write"
+            }
+          },
+          required: ["value"]
+        }
+      },
+      {
+        name: "acquire_exclusive_lock",
+        description: "Acquire exclusive lock",
+        inputSchema: {
+          type: "object",
+          properties: {},
+          required: []
+        }
+      },
+      {
+        name: "release_exclusive_lock",
+        description: "Release exclusive lock",
+        inputSchema: {
+          type: "object",
+          properties: {},
+          required: []
+        }
+      },
+      {
+        name: "conflicting_tool_a",
+        description: "Tool with conflicting requirements",
+        inputSchema: {
+          type: "object",
+          properties: {
+            param: {
+              type: "string",
+              description: "Parameter that must be 'a'"
+            }
+          },
+          required: ["param"]
+        }
+      },
+      {
+        name: "conflicting_tool_b",
+        description: "Tool with conflicting requirements",
+        inputSchema: {
+          type: "object",
+          properties: {
+            param: {
+              type: "string",
+              description: "Parameter that must be 'b'"
+            }
+          },
+          required: ["param"]
         }
       }
     ]
@@ -139,6 +213,83 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         content: [{
           type: "text",
           text: timeGreeting
+        }]
+      };
+    }
+
+    case "read_shared_resource": {
+      return {
+        content: [{
+          type: "text",
+          text: sharedResource
+        }]
+      };
+    }
+
+    case "write_shared_resource": {
+      const value = String(request.params.arguments?.value || "");
+      sharedResource = value;
+      return {
+        content: [{
+          type: "text",
+          text: `Shared resource updated to: ${value}`
+        }]
+      };
+    }
+
+    case "acquire_exclusive_lock": {
+      if (exclusiveLock) {
+        throw new Error("Exclusive lock is already held");
+      }
+      exclusiveLock = true;
+      return {
+        content: [{
+          type: "text",
+          text: "Exclusive lock acquired"
+        }]
+      };
+    }
+
+    case "release_exclusive_lock": {
+      if (!exclusiveLock) {
+        throw new Error("Exclusive lock is not held");
+      }
+      exclusiveLock = false;
+      return {
+        content: [{
+          type: "text",
+          text: "Exclusive lock released"
+        }]
+      };
+    }
+
+    case "conflicting_tool_a": {
+      const param = String(request.params.arguments?.param);
+      if (param !== "a") {
+        throw new Error("Parameter must be 'a' for tool A");
+      }
+      lastToolCalled = "a";
+      return {
+        content: [{
+          type: "text",
+          text: "Tool A executed successfully"
+        }]
+      };
+    }
+
+    case "conflicting_tool_b": {
+      const param = String(request.params.arguments?.param);
+      if (param !== "b") {
+        throw new Error("Parameter must be 'b' for tool B");
+      }
+      if (lastToolCalled === "a") {
+        throw new Error("Cannot call tool B after tool A due to conflicting requirements");
+      }
+      lastToolCalled = "b";
+      return {
+        content: [{
+          type: "text",
+          text: "Tool B executed successfully"
         }]
       };
     }

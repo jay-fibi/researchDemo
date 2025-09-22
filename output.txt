@@ -1,1 +1,12 @@
-test
+Attempting to allocate memory for 100000000 integers (400000000 bytes, ~381.47 MB)
+Memory allocated successfully in 0.000 seconds
+Filling array with values...
+Array filled in 0.166 seconds
+Total setup time: 0.166 seconds
+
+Memory Statistics:
+- Array size: 100000000 elements
+- Memory used: 400000000 bytes (381.47 MB)
+- Element size: 4 bytes
+
+Press Enter to free memory and exit...

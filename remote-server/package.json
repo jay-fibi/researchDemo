@@ -1,0 +1,29 @@
+{
+  "name": "remote-joke-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for remote jokes",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "remote-joke-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
+    "start": "node build/index.js --http",
+    "dev": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}

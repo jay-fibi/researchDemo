@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "tables": {
+    "articles": {
+      "name": "articles",
+      "schema": {
+        "title": "str",
+        "content": "str",
+        "author": "str",
+        "published": "bool"
+      },
+      "records": {
+        "2b3ac698-528d-437e-8cd4-9bfa2f77af72": {
+          "id": "2b3ac698-528d-437e-8cd4-9bfa2f77af72",
+          "data": {
+            "title": "Getting Started with Python",
+            "content": "Python is a great programming language...",
+            "author": "John Doe",
+            "published": true
+          },
+          "created_at": "2025-09-18T00:37:27.351321",
+          "updated_at": "2025-09-18T00:37:27.351325"
+        }
+      },
+      "indexes": {}
+    }
+  }
+}
