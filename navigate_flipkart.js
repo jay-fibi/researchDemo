@@ -83,7 +83,7 @@ async function navigateToFlipkart() {
             for (const selector of emailSelectors) {
                 try {
                     await page.waitForSelector(selector, { timeout: 5000 });
-                    await page.type(selector, 'jay@test.com');
+                    await page.type(selector, 'jay@abc.efg');
                     console.log(`Email entered using selector: ${selector}`);
                     emailEntered = true;
                     break;
@@ -109,7 +109,7 @@ async function navigateToFlipkart() {
                         return true;
                     }
                     return false;
-                }, 'jay@test.com');
+                }, 'jay@abc.efg');
                 console.log('Email entered using JavaScript evaluation');
             }
 
@@ -118,7 +118,7 @@ async function navigateToFlipkart() {
         }
 
         console.log('Automation completed successfully');
-        console.log('Email "jay@test.com" has been entered');
+        console.log('Email "jay@abc.efg" has been entered');
 
     } catch (error) {
         console.error('Error during automation:', error);

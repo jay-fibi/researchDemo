@@ -15,7 +15,7 @@ async function navigateAmazonUber() {
         console.log('Navigating to amazon.com...');
         await page.goto('https://amazon.com', {
             waitUntil: 'networkidle2',
-            timeout: 30000
+            timeout: 30000;
         });
         console.log('Successfully navigated to amazon.com');
 
